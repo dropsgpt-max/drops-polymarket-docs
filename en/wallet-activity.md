@@ -1,5 +1,8 @@
 # Polymarket Wallet Activity
 
+> [!WARNING]
+> **Draft based on the changelog.** The feature was announced on **March 10, 2026** as *"Polymarket activity tracking available for monitored wallets"* with a new *"Polymarket option in wallet Filters → Events settings"*. The exact UI labels, default toggle state, and alert message layout below are reconstructed from that announcement and are not yet test-covered. Treat anything not marked as confirmed as a best-effort sketch.
+
 ## 🔁 Track Polymarket Trades of Watched Wallets
 
 While [Add Polymarket Event](./add-event.md) watches **one market regardless of who trades on it**, Wallet Polymarket Activity does the opposite — it watches **one wallet across every Polymarket market it touches**. Combine the two and you cover both ends of the firehose.
@@ -9,15 +12,15 @@ While [Add Polymarket Event](./add-event.md) watches **one market regardless of 
 
 ## 🎯 How It Works
 
-Drops Bot already monitors Polygon transactions for your tracked wallets. When the **Polymarket** event type is enabled in that wallet's filter, the bot recognises Polymarket-related transactions (share purchases, sales, position adjustments) and emits a dedicated alert instead of a generic transfer log.
+Drops Bot already monitors Polygon transactions for your tracked wallets. The Mar 10, 2026 release added a **Polymarket** option to each wallet's `Filters → Events` panel: when it's on, Polymarket-related transactions surface as a dedicated alert flavour rather than as generic transfers.
 
-The relevant menu path is:
+The path mentioned in the changelog is:
 
 ```
 Wallet → Filters → Events → Polymarket
 ```
 
-This mirrors the same `Filters → Events` pattern used by liquidations, swaps, and other wallet event types.
+This mirrors the `Filters → Events` pattern used by liquidations, swaps, and other wallet event types. <!-- VERIFY: exact menu wording -->
 
 ## 🪜 Enable Polymarket on a Watched Wallet
 
@@ -29,14 +32,14 @@ This mirrors the same `Filters → Events` pattern used by liquidations, swaps, 
 
 ### 2. Open Filters → Events
 
-Tap **Filters**, then **Events**. You'll see a list of event types: Transfers, Swaps, NFT Transfers, Approvals, Polymarket, and others.
+Tap **Filters**, then **Events**. You should see a list of event types — Transfers, Swaps, NFT Transfers, Approvals, **Polymarket**, and others. <!-- VERIFY: full list of event-type labels and their order -->
 
 ### 3. Toggle Polymarket on
 
 Switch the **Polymarket** toggle to ON.
 
 > [!NOTE]
-> **Default state.** Since the April 9, 2026 release, the Polymarket toggle defaults to **enabled** for newly added wallets. <!-- VERIFY: confirm default state -->
+> **Default state unconfirmed.** The Apr 9, 2026 release shipped a Polymarket cleanup fix (events removed on account deletion). Whether new wallets get the Polymarket toggle pre-enabled by default is **not stated in the changelog** — verify by adding a fresh wallet and checking its `Filters → Events`. <!-- VERIFY: default toggle state for newly added wallets -->
 
 ### 4. Save and exit
 
@@ -47,14 +50,16 @@ Confirm changes. The wallet's next Polymarket trade on Polygon will produce a Te
 
 ## 📨 What Alerts Look Like
 
-A typical Polymarket wallet alert contains:
+The exact format isn't documented in the public changelog, but based on the bot's other event-flavoured alerts, a Polymarket wallet alert is expected to include the wallet label, the action (buy / sell), the market and outcome it touched, the trade size, and a link back to Polymarket. <!-- VERIFY: capture a real alert sample and replace this approximation -->
 
-* **Wallet** — address and the label you gave it
-* **Action** — Buy / Sell / Position Adjustment
-* **Market** — event name and outcome (e.g. "Will X happen by Date? — YES")
-* **Size** — number of shares and USD-equivalent
-* **Price** — execution price per share
-* **Link** — direct link to the Polymarket event
+**Approximate layout** (mock-up, replace with a real screenshot once captured):
+
+```
+🟦 vitalik.eth · Polymarket
+Bought 50 shares · "Will France win 2026 WC?" · YES
+Size: $11.70 · Price: 23.4¢
+↗ polymarket.com/event/2026-fifa-world-cup-winner-595
+```
 
 <!-- screenshot: a Polymarket wallet activity alert in Telegram -->
 

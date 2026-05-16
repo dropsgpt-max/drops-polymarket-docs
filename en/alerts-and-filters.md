@@ -2,38 +2,26 @@
 
 ## 🔔 Alert Settings
 
-Polymarket alerts are tunable at **two levels**: globally (defaults applied to every Polymarket event you track) and individually (per-event overrides). This page walks through both.
+Polymarket alerts are tuned **per-odd** — each tracked outcome has its own settings panel. There is no separate global Polymarket settings screen; defaults are applied when a new odd is added, and you adjust them individually from the watchlist.
 
-> [!NOTE]
-> **Inheritance rule.** When you add a new event, it inherits the current **global** settings. Per-event overrides are applied on top and never affect the global preset.
-
-## 🌐 Global Polymarket Options
-
-`Main Menu → Settings → Tracking Settings → Polymarket` <!-- VERIFY: exact menu path for global Polymarket settings -->
-
-The global panel exposes:
-
-* **🔔 Alert frequency** — `Real-time` / `Throttled` / `Digest`. Real-time pings on every qualifying event; Digest groups updates into periodic summaries.
-* **📈 Default price-move threshold** — odds shift that must occur before a price alert fires. Lower = noisier, higher = quieter.
-* **💰 Default whale threshold** — minimum USD-equivalent trade size that qualifies as a "whale" alert.
-* **📊 Volume spike alerts** — toggle on/off; threshold is `% jump over rolling 1h average`.
-* **🟢 New trader alerts** — toggle on/off; surfaces first-time entrants on the market.
-* **🔕 Mute schedule** — quiet hours during which Polymarket alerts are suppressed.
-<!-- VERIFY: confirm which of these toggles exist; some are reasonable additions to validate against UI -->
-
-## 📝 Individual Event Settings
+## 📝 Per-Odd Settings Panel
 
 Open `/polymarket → tap an odd's ✏️ deep-link`. The edit panel is a single 7-row keyboard with one button per setting:
 
-* **🔈 Notifications** — master ON/OFF for this odd. The icon encodes state: **🔈** = enabled, **🔇** = muted.
-* **📉 Price Change** — fires when the odd's price moves by at least the configured percentage.
-* **🚨 Price Target** — fires when the odd crosses a specific absolute price level (in ¢).
-* **♻️ Swaps Alert** — fires on share-swap trades occurring on the market.
-* **📊 Volume Target** — fires when cumulative volume crosses a configured USD threshold.
-* **🗑 Delete** — stops tracking this odd.
-* **↩ Back** — return to the watchlist.
+| Button | What it does | Value type |
+|---|---|---|
+| **🔈 Notifications** | Master ON/OFF for this odd. Icon encodes state: 🔈 = enabled, 🔇 = muted. | Toggle |
+| **📉 Price Change** | Fires when the odd's price moves by at least the configured percentage. | Percent (e.g. 5%) |
+| **🚨 Price Target** | Fires when the odd crosses a specific absolute price level. | Cents (e.g. 50¢) |
+| **♻️ Swaps Alert** | Fires on share-swap trades occurring on the market. | Toggle / threshold |
+| **📊 Volume Target** | Fires when cumulative volume crosses a configured USD threshold. | USD (e.g. $5,000) |
+| **🗑 Delete** | Stops tracking this odd. | Action |
+| **↩ Back** | Return to the watchlist. | Action |
 
-Tapping any of the four threshold buttons opens a value picker; the current value is shown in the button label after a colon (e.g. `📉 Price Change: 5%`).
+Tapping any threshold button opens a value picker; the current value is shown in the button label after a colon (e.g. `📉 Price Change: 5%`).
+
+> [!NOTE]
+> Each tracked odd has **its own independent settings**. If you track multiple outcomes of the same event, you can give each one different thresholds — for example, only ping on `France YES` price moves but watch volume on `Spain YES`.
 
 ## 🎚️ Telegram Notification Routing
 
@@ -49,42 +37,76 @@ Connect a profile to a Telegram group or channel via [Bot for Groups and Channel
 
 Set quiet hours from `Settings → Notifications` to suppress all alerts (Polymarket included) during specific time ranges. Useful for sleep schedules or focus blocks.
 
-## 🧪 Recommended Presets
+## 🧪 Suggested Threshold Recipes
 
-* **Watch-only / low noise** — Digest frequency, price-move ≥ 10 pp, whale ≥ $5,000. You'll get a few digested updates per day per event.
-* **Active trader** — Real-time, price-move ≥ 3 pp, whale ≥ $1,000. Expect frequent pings; better for markets you're actively positioning on.
-* **Whale-watcher** — Real-time, disable price-move alerts, whale ≥ $25,000. Only large trades come through, regardless of odds movement.
+Three starting points for the per-odd panel. Tune from there based on how chatty the market is.
+
+**🪶 Watch-only / low noise**
+
+| Setting | Value |
+|---|---|
+| 🔈 Notifications | ON |
+| 📉 Price Change | `10%` |
+| 🚨 Price Target | leave unset |
+| ♻️ Swaps Alert | OFF |
+| 📊 Volume Target | `$10,000` |
+
+You'll get a handful of pings per day on a liquid market — mainly large volume jumps and big price moves.
+
+**⚡ Active trader**
+
+| Setting | Value |
+|---|---|
+| 🔈 Notifications | ON |
+| 📉 Price Change | `3%` |
+| 🚨 Price Target | set a level you care about |
+| ♻️ Swaps Alert | ON |
+| 📊 Volume Target | `$1,000` |
+
+Frequent pings — best for markets you're actively positioning on.
+
+**🐳 Whale-watcher**
+
+| Setting | Value |
+|---|---|
+| 🔈 Notifications | ON |
+| 📉 Price Change | OFF (or very high, e.g. `25%`) |
+| 🚨 Price Target | leave unset |
+| ♻️ Swaps Alert | ON |
+| 📊 Volume Target | `$25,000` |
+
+Only large-size flow comes through, regardless of price movement.
 
 > [!WARNING]
-> **Lowering thresholds for highly liquid markets can flood your chat.** Markets like major elections may produce dozens of whale-tier trades per hour. Start conservatively and loosen up.
+> **Highly liquid markets can flood your chat at low thresholds.** Major elections may produce dozens of `Volume Target: $1,000` triggers per hour. Start with the conservative recipe and loosen up.
 
 ## ❓ FAQ
 
 <details>
 <summary>Why am I not getting alerts even though the market is moving?</summary>
 
-The most common reason is that the move hasn't crossed your **price-move threshold**, or the trades haven't crossed your **whale threshold**. Lower thresholds in the global panel or override per-event.
+The most common reason is that the move hasn't crossed your **Price Change** percentage, or trades haven't crossed your **Volume Target**. Open the odd's ✏️ panel and lower the relevant threshold, or turn on **Swaps Alert** if you want per-trade notifications.
 
 </details>
 
 <details>
-<summary>Can I disable Polymarket alerts entirely without removing events?</summary>
+<summary>Can I disable Polymarket alerts entirely without removing tracked odds?</summary>
 
-Yes — set global Alert frequency to **Off**, or mute individual events. Your tracking stays intact; only the notifications stop.
-
-</details>
-
-<details>
-<summary>Do mute schedules apply per event or globally?</summary>
-
-The global mute schedule covers all Polymarket alerts at once. Per-event mute is a separate, simpler ON/OFF toggle.
+Yes — toggle **🔈 Notifications** to off (🔇) on each odd you want silenced. Tracking stays intact; the bot just stops pinging for those odds.
 
 </details>
 
 <details>
-<summary>What happens when I edit global thresholds — do existing events update?</summary>
+<summary>Do quiet hours apply to Polymarket alerts?</summary>
 
-Existing events keep any **per-event overrides** they already have. Events without overrides immediately use the new global value.
+A Telegram-wide mute schedule (`Settings → Notifications`) suppresses every Drops Bot alert during the configured window, Polymarket included.
+
+</details>
+
+<details>
+<summary>Do my thresholds carry over when I add more odds to the same event?</summary>
+
+No — each odd starts fresh with the bot's default values. Adjust them individually after adding.
 
 </details>
 
@@ -92,10 +114,10 @@ Existing events keep any **per-event overrides** they already have. Events witho
 
 | Issue | Likely Cause | Fix |
 |---|---|---|
-| No alerts despite enabling everything | Global Alert frequency set to **Off** | Switch to Real-time, Throttled, or Digest |
-| Some events alert, others don't | Per-event override mutes them or sets very high thresholds | Open the event's edit panel and reset to global |
-| Too many alerts | Thresholds too low | Raise price-move and whale thresholds; switch to Digest frequency |
-| Alerts during quiet hours | Mute schedule not applied / timezone mismatch | Confirm timezone in `Settings → Notifications` |
+| No alerts at all | All odds have **🔈 Notifications** off (🔇) | Re-enable in each odd's ✏️ panel |
+| Some odds alert, others don't | Per-odd thresholds differ — quieter odds need tighter settings | Lower **Price Change** / **Volume Target** in the silent odd's ✏️ panel |
+| Too many alerts | Thresholds too low or **Swaps Alert** on for a busy market | Raise **Price Change** / **Volume Target**, or turn off **Swaps Alert** |
+| Alerts during quiet hours | Telegram-side mute not applied / timezone mismatch | Check `Settings → Notifications` and your device timezone |
 
 ---
 
