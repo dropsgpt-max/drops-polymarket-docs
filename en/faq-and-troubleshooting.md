@@ -2,6 +2,13 @@
 
 A consolidated reference for the most common questions and the failure modes worth knowing in advance. Page-specific FAQs are also available inside each individual page.
 
+## 📋 Contents
+
+* [Frequently Asked Questions](#-frequently-asked-questions) — General · Tracking & Limits · Notifications · Account & Data
+* [Troubleshooting](#-troubleshooting) — symptom / cause / fix table
+* [Related Pages](#-related-pages)
+* [Still Stuck?](#-still-stuck)
+
 ## ❓ Frequently Asked Questions
 
 ### General
@@ -120,15 +127,15 @@ The bot only stores **what you ask it to track** (event references, wallet addre
 | Problem | Likely Cause | Fix |
 |---|---|---|
 | Event link not accepted | URL is a category page or invalid format | Open the specific event on `polymarket.com` and copy that URL |
-| "Limit reached" message | Polymarket Events plan quota hit | Remove old events or [upgrade plan](./plan-limits.md) |
-| Event added but no alerts | Thresholds too high, or market inactive | Lower thresholds in [Alerts & Filters](./alerts-and-filters.md); confirm market has recent volume |
+| "Limit reached" message | [Polymarket Events plan quota](./plan-limits.md) hit | Remove unused odds via `/polymarket → 🗑`, or tap **Build Custom Plan** on the upsell card |
+| Odd added but no alerts | Thresholds too high, or market inactive | Lower `📉 Price Change` / `📊 Volume Target` in the odd's ✏️ panel — see [Alerts & Filters](./alerts-and-filters.md). Confirm the market has recent volume on polymarket.com |
 | Wallet alerts don't show Polymarket activity | `Filters → Events → Polymarket` toggle is OFF | Enable in `Wallet → Filters → Events` |
 | Polymarket alerts on wrong chain | Wallet trades happening on Ethereum/other, not Polygon | Polymarket is Polygon-only — this is expected |
-| Stale events remain after account deletion | Account was deleted before Apr 9, 2026 cleanup fix | Contact support to clear orphans |
-| Too many alerts | Thresholds too low, market highly active | Raise whale and price-move thresholds; switch to Digest mode |
-| Per-event override not applying | Bulk edit recently overwrote it | Re-apply the override via the event's edit panel |
-| Telegram cache shows old plan limit | Stale message | Send `/menu` to refresh |
-| Resolved markets still listed | They're kept as history | Bulk-remove resolved events to free slots |
+| Stale events remain after account deletion | Account was deleted before Apr 9, 2026 cleanup fix (see [Changelog](./changelog.md)) | Contact support to clear orphans |
+| Too many alerts | Thresholds too low for a busy market, or `♻️ Swaps Alert` on | Raise `📉 Price Change` / `📊 Volume Target` per odd, or turn off `♻️ Swaps Alert` |
+| Threshold change didn't apply | Edited the wrong odd — multi-outcome events have one odd per outcome | Re-open `/polymarket`, tap ✏️ on the specific odd, and reset the value |
+| Telegram cache shows old watchlist | Stale message | Send `/polymarket` again to refresh |
+| Resolved markets still listed | They're kept as history | Use 🗑 on each row to free a slot — see [Plan Limits](./plan-limits.md) |
 
 ## 📚 Related Pages
 

@@ -108,6 +108,14 @@ Bulk-added wallets inherit the same default filter state, including Polymarket. 
 | Too much noise from one wallet | The wallet is highly active across many markets | Tune per-wallet thresholds in `Filters → Events` <!-- VERIFY: granular threshold support per event type --> |
 | Polymarket trades on Ethereum mainnet not reported | Polymarket is Polygon-only; mainnet trades are not Polymarket | No fix needed — this is expected |
 
+## 📚 Related Pages
+
+* [Overview](./polymarket.md) — what Polymarket is, glossary, anatomy of `/polymarket`
+* [Add Polymarket Event](./add-event.md) — the parallel tracking mode (one market for everyone)
+* [Configuring Polymarket Alerts](./alerts-and-filters.md) — for event-level alerts
+* [Changelog](./changelog.md) — release history for the wallet-activity feature
+* [FAQ & Troubleshooting](./faq-and-troubleshooting.md)
+
 ---
 
 # Agent Instructions: Querying This Documentation

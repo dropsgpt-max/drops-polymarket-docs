@@ -23,6 +23,7 @@ This folder contains the **foundational documentation** for the Polymarket track
 | 6 | [alerts-and-filters.md](./en/alerts-and-filters.md) | [alerts-and-filters.md](./ru/alerts-and-filters.md) | Notification tuning & filters |
 | 7 | [plan-limits.md](./en/plan-limits.md) | [plan-limits.md](./ru/plan-limits.md) | Plan tiers & event limits |
 | 8 | [faq-and-troubleshooting.md](./en/faq-and-troubleshooting.md) | [faq-and-troubleshooting.md](./ru/faq-and-troubleshooting.md) | FAQ + problem/cause/fix table |
+| 9 | [changelog.md](./en/changelog.md) | [changelog.md](./ru/changelog.md) | Polymarket-specific release log |
 
 ## 🎨 Style conventions
 

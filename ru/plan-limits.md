@@ -85,6 +85,13 @@ Wallet-level Polymarket Activity (см. [Wallet Activity](./wallet-activity.md))
 | Апгрейднулись, лимит не изменился | Кэш Telegram | `/menu` для обновления; если всё ещё устарел — перезапустите чат |
 | Лимит Custom-плана не применён | Конфигурация плана в процессе | Проверьте `💳 Subscription` на текущие эффективные лимиты |
 
+## 📚 Связанные страницы
+
+* [Обзор](./polymarket.md) — Глоссарий, в т.ч. как оддсы соотносятся с событиями
+* [Добавить Polymarket Event](./add-event.md) — добавление событий тратит по слоту на исход
+* [Активность кошельков на Polymarket](./wallet-activity.md) — использует квоту **Wallets**, не эту
+* [Changelog](./changelog.md) — история cleanup'ов, фикс удаления аккаунта 9 апреля 2026
+
 ---
 
 # Agent Instructions: Querying This Documentation

@@ -85,6 +85,13 @@ Both currently offer the same **500-event** Polymarket allowance. Differences be
 | Upgraded but limit unchanged | Telegram cache | Send `/menu` to refresh; if still stale, restart the chat |
 | Custom plan limit not applied | Plan configuration pending | Check `💳 Subscription` for current effective limits |
 
+## 📚 Related Pages
+
+* [Overview](./polymarket.md) — Glossary, including how odds relate to events
+* [Add Polymarket Event](./add-event.md) — adding events consumes one slot per outcome
+* [Wallet Polymarket Activity](./wallet-activity.md) — uses the **Wallets** quota, not this one
+* [Changelog](./changelog.md) — cleanup history, Apr 9 2026 account-deletion fix
+
 ---
 
 # Agent Instructions: Querying This Documentation

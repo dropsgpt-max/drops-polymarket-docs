@@ -1,5 +1,16 @@
 # Event Management
 
+## 📋 Contents
+
+* [Managing Your Tracked Events](#-managing-your-tracked-events)
+* [Viewing All Tracked Events](#-viewing-all-tracked-events)
+* [Editing a Specific Event](#-editing-a-specific-event)
+* [Bulk Editing All Tracked Events](#-bulk-editing-all-tracked-events)
+* [Removing an Event](#-removing-an-event)
+* [Quick Access](#-quick-access)
+* [FAQ](#-faq)
+* [Troubleshooting](#-troubleshooting)
+
 ## 🛠️ Managing Your Tracked Events
 
 Once you've added a few Polymarket events, you'll want a single place to review, edit, and clean them up. This page covers the day-to-day housekeeping flow.
@@ -106,6 +117,12 @@ Yes. Removal clears all per-event overrides. Re-adding the event starts fresh wi
 | Bulk operation seems stuck | Large list, processing in background | Wait a few seconds; if no response after 30s, retry |
 | Removed event still alerts | Notification queued before deletion | Should clear within one alert cycle; if not, report via Help Center |
 | Resolved events still showing | They are kept as historical records | Bulk-remove them to free slots |
+
+## 📚 Related Pages
+
+* [Add Polymarket Event](./add-event.md) — how new odds appear in the watchlist
+* [Configuring Polymarket Alerts](./alerts-and-filters.md) — full reference for the ✏️ edit panel
+* [Plan Limits](./plan-limits.md) — quota counting and the upsell card
 
 ---
 

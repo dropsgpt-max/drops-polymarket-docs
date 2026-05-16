@@ -1,5 +1,14 @@
 # Configuring Polymarket Alerts
 
+## 📋 Contents
+
+* [Alert Settings](#-alert-settings)
+* [Per-Odd Settings Panel](#-per-odd-settings-panel)
+* [Telegram Notification Routing](#-telegram-notification-routing)
+* [Suggested Threshold Recipes](#-suggested-threshold-recipes)
+* [FAQ](#-faq)
+* [Troubleshooting](#-troubleshooting)
+
 ## 🔔 Alert Settings
 
 Polymarket alerts are tuned **per-odd** — each tracked outcome has its own settings panel. There is no separate global Polymarket settings screen; defaults are applied when a new odd is added, and you adjust them individually from the watchlist.
@@ -118,6 +127,12 @@ No — each odd starts fresh with the bot's default values. Adjust them individu
 | Some odds alert, others don't | Per-odd thresholds differ — quieter odds need tighter settings | Lower **Price Change** / **Volume Target** in the silent odd's ✏️ panel |
 | Too many alerts | Thresholds too low or **Swaps Alert** on for a busy market | Raise **Price Change** / **Volume Target**, or turn off **Swaps Alert** |
 | Alerts during quiet hours | Telegram-side mute not applied / timezone mismatch | Check `Settings → Notifications` and your device timezone |
+
+## 📚 Related Pages
+
+* [Add Polymarket Event](./add-event.md) — how to add odds in the first place
+* [Event Management](./event-management.md) — opening the ✏️ panel from the watchlist
+* [Wallet Polymarket Activity](./wallet-activity.md) — alerts driven by watched wallets instead of per-odd thresholds
 
 ---
 

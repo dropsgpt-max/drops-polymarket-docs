@@ -1,5 +1,14 @@
 # Add Polymarket Event
 
+## 📋 Contents
+
+* [Tracking a Specific Event](#-tracking-a-specific-event)
+* [Walkthrough](#-walkthrough)
+* [Bulk Adding](#-bulk-adding)
+* [What Counts as a Valid Link](#-what-counts-as-a-valid-link)
+* [FAQ](#-faq)
+* [Troubleshooting](#-troubleshooting)
+
 ## ➕ Tracking a Specific Event
 
 Adding a Polymarket event tells the bot to watch **one specific market** and notify you when meaningful things happen on it — price shifts, large trades, volume bursts. This is the most direct way to follow markets you already care about.
@@ -111,6 +120,13 @@ No. Tracking is purely off-chain on the bot's side. Your wallet is not touched a
 | "Limit reached" | Plan quota for Polymarket Events exceeded | Remove unused events or [upgrade plan](./plan-limits.md) |
 | Bot accepts link but says "event not found" | Polymarket has delisted or hidden the event | Pick a currently visible event |
 | No alerts after adding | Thresholds too high, or market has no activity | Lower thresholds in [Alerts & Filters](./alerts-and-filters.md) |
+
+## 📚 Related Pages
+
+* [Quickstart](./quickstart.md) — the 4-step short version of this walkthrough
+* [Event Management](./event-management.md) — view, edit, remove tracked odds
+* [Configuring Polymarket Alerts](./alerts-and-filters.md) — tune thresholds per odd
+* [Plan Limits](./plan-limits.md) — how many odds your tier supports
 
 ---
 

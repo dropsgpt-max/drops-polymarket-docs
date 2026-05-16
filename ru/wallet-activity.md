@@ -108,6 +108,14 @@ Size: $11.70 · Price: 23.4¢
 | Слишком много шума с одного кошелька | Кошелёк очень активен на многих рынках | Тонко настройте per-wallet пороги в `Filters → Events` <!-- VERIFY: гранулярные пороги per event type --> |
 | Polymarket-сделки в Ethereum mainnet не репортятся | Polymarket — Polygon-only; mainnet-сделки это не Polymarket | Решение не нужно — это ожидаемое поведение |
 
+## 📚 Связанные страницы
+
+* [Обзор](./polymarket.md) — что такое Polymarket, глоссарий, anatomy of `/polymarket`
+* [Добавить Polymarket Event](./add-event.md) — параллельный режим трекинга (один рынок для всех)
+* [Настройка алертов Polymarket](./alerts-and-filters.md) — для event-level алертов
+* [Changelog](./changelog.md) — история релизов фичи wallet activity
+* [FAQ и Troubleshooting](./faq-and-troubleshooting.md)
+
 ---
 
 # Agent Instructions: Querying This Documentation
