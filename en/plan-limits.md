@@ -1,8 +1,10 @@
 # Polymarket Plan Limits
 
-## 💳 How Many Events You Can Track
+## 💳 How Many Odds You Can Track
 
-The **Polymarket Events** quota — the number of markets you can track at event-level — scales with your subscription tier. Wallet-level Polymarket Activity (see [Wallet Activity](./wallet-activity.md)) uses your separate **Wallets** quota and is not affected by the limits below.
+The **Polymarket Events** quota — the bot's name for your Polymarket tracking allowance — scales with your subscription tier. The quota counts **odds** (one per tracked outcome, see [Glossary](./polymarket.md#-glossary)), so a multi-outcome event you tracked with `Select All Yes` consumes one slot per outcome.
+
+Wallet-level Polymarket Activity (see [Wallet Activity](./wallet-activity.md)) uses your separate **Wallets** quota and is not affected by the limits below.
 
 ## 📋 Polymarket Events by Plan
 

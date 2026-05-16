@@ -30,11 +30,7 @@
 <details>
 <summary>Есть ли shortcut-команда для Polymarket?</summary>
 
-Да — **`/polymarket`** открывает watchlist напрямую. Ответ может принять одну из трёх форм:
-
-* **Empty state** — `"You are not tracking any Polymarket events yet"` плюс клавиатура из 4 кнопок: **Add Event/Wallet**, **Polymarket Wallets**, **Trending Events**, **Back**.
-* **Populated state** — `"Your Polymarket Events Watchlist"` со списком трекаемых оддсов и инлайн-ссылками 🗑 (удалить) и ✏️ (редактировать) в каждой строке.
-* **Upsell state** — появляется при достижении лимита плана. Единственная кнопка — **Build Custom Plan**.
+Да — **`/polymarket`** открывает watchlist напрямую. Ответ принимает одну из трёх форм (empty / populated / upsell) — полный разбор см. в [Anatomy of `/polymarket`](./polymarket.md#-anatomy-of-polymarket).
 
 События также можно добавить, переслав в чат бота ссылку вида `polymarket.com/event/<slug>`, либо открыть watchlist через `/menu → Tracking → Polymarket Events`.
 

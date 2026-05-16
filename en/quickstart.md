@@ -1,57 +1,30 @@
 # Polymarket Quickstart
 
-## ⚡ Start Tracking in 60 Seconds
+## ⚡ Track your first event in under 60 seconds
 
-You don't need to configure anything to start receiving Polymarket alerts. Open the market you care about, forward its link to the bot, and you're done — the next price move will arrive in your Telegram.
+1. Open [polymarket.com](https://polymarket.com) and click into the event you want to follow.
+2. Copy the URL from the address bar — it should look like `https://polymarket.com/event/<slug>`.
+3. Paste the URL into your Drops Bot chat and send it.
+4. On the **odds-selection screen** that pops up, tap **Select All Yes** (or hand-pick specific outcomes), then **Back** to finish.
+
+> [!TIP]
+> **Done.** Each outcome you selected is now in your watchlist as an **odd**. The bot will ping you in Telegram on price moves and volume bursts according to its default thresholds. Type `/polymarket` any time to see the watchlist.
+
+![Polymarket event page — copy the URL from the address bar at the top](../../../media/screenshots/polymarket/event-page.png)
 
 > [!NOTE]
 > **Prerequisites**
 > * You have an active Drops Bot chat (`/start` already done).
 > * You haven't hit your plan's Polymarket Event limit — see [Plan Limits](./plan-limits.md).
 
-## 🚀 The Four Steps
-
-### 1. Open a Polymarket event
-
-Go to [polymarket.com](https://polymarket.com), find the market you want to follow, and open its dedicated page.
-
-![Polymarket event page — copy the URL from the address bar at the top](../../../media/screenshots/polymarket/event-page.png)
-
-### 2. Copy the event link
-
-Copy the URL from the browser address bar. The bot accepts URLs of the form `https://polymarket.com/event/<slug>` (with or without query parameters).
-
-> [!WARNING]
-> **Event URL only.** Category listings (`polymarket.com/markets`, `/sports`, etc.) and the Polymarket home page are rejected — make sure the URL contains `/event/` followed by a slug.
-
-### 3. Forward the link to the bot
-
-Paste the URL into your Drops Bot chat and send it. The bot will recognise the Polymarket domain and prompt you to confirm.
-
-<!-- screenshot: Telegram chat with a Polymarket URL pasted in -->
-
-### 4. Confirm tracking
-
-Tap **Track Event** in the bot's reply. The market is added to your `🟦 Polymarket Events` list and starts producing alerts immediately.
-
-> [!TIP]
-> **Done!** You'll get a Telegram notification the next time activity on this market crosses your alert thresholds.
-
 ## ➡️ Next Steps
 
-Now that your first event is live, you may want to:
-
-* 🔔 [Tune alert sensitivity](./alerts-and-filters.md) — global thresholds and per-event overrides.
+* ➕ [**Add Polymarket Event** — full walkthrough](./add-event.md), including the odds-selection screen, multi-outcome events, and pagination.
+* 🔔 [Configure alert thresholds](./alerts-and-filters.md) — `Price Change`, `Price Target`, `Swaps Alert`, `Volume Target`.
 * 🔁 [Track wallets that bet on Polymarket](./wallet-activity.md) — surface whale moves automatically.
-* 🛠️ [Manage your event list](./event-management.md) — view, edit, or remove tracked events.
+* 🛠️ [Manage your watchlist](./event-management.md) — view, edit, remove.
 
-## 🔧 Troubleshooting
-
-| Issue | Likely Cause | Fix |
-|---|---|---|
-| Bot doesn't recognise the link | URL is for a category page, not a specific event | Open the event itself and copy that URL |
-| "Limit reached" reply | You've hit your plan's Polymarket Event quota | Remove an old event or [upgrade your plan](./plan-limits.md) |
-| Link accepted but no alerts arrive | Market is already resolved or has no activity | Pick an active market with recent volume |
+Stuck on something? See the [combined FAQ + Troubleshooting](./faq-and-troubleshooting.md).
 
 ---
 

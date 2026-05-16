@@ -83,7 +83,9 @@ Tracking stops automatically once the market resolves. The event remains in your
 <details>
 <summary>Can I track multiple outcomes of one event?</summary>
 
-Yes. The odds-selection screen lets you pick individual outcomes one by one, or hit **Select All Yes** / **Select All No** to track every outcome at once. Each tracked odd appears as its own row in `/polymarket` and can be edited (✏️) or removed (🗑) independently.
+Yes. The odds-selection screen lets you pick individual outcomes one by one, or hit **Select All Yes** / **Select All No** to track every outcome at once. Each tracked **odd** appears as its own row in `/polymarket` and can be edited (✏️) or removed (🗑) independently.
+
+> Each odd consumes **one slot** of your Polymarket Events quota. A 12-outcome event with `Select All Yes` will use 12 slots, not 1 — see [Plan Limits](./plan-limits.md).
 
 </details>
 

@@ -9,11 +9,20 @@
 
 ## 👀 Просмотр всех отслеживаемых событий
 
-Введите **`/polymarket`**, чтобы открыть watchlist напрямую. Сообщение озаглавлено **`Your Polymarket Events Watchlist`**. Каждый отслеживаемый оддс — это строка, содержащая:
+Введите **`/polymarket`**, чтобы открыть watchlist напрямую. Сообщение озаглавлено **`Your Polymarket Events Watchlist`**, по одной строке на каждый трекаемый оддс. В строке — лейбл исхода, текущая цена и инлайн-deep-links для быстрых действий.
 
-* Заголовок события и выбранный исход (например, `🟦 Will <outcome>? <price>¢`)
-* Инлайн-deep-link 🗑 для удаления одним тапом (за ним стоит `?start=DELpmev_…`)
-* Инлайн-deep-link ✏️ для открытия панели редактирования
+**Примерная вёрстка** (mock-up — заменить реальным скриншотом после первого алерта):
+
+```
+Your Polymarket Events Watchlist
+
+🟦 Will France win the 2026 FIFA World Cup? — YES · 17.4¢   🗑 ✏️
+🟦 Will Spain reach the 2026 World Cup final? — YES · 31.8¢   🗑 ✏️
+🟦 Bitcoin above $120k on May 16 — NO · 64.0¢                🗑 ✏️
+```
+
+* Deep-link 🗑 удаляет оддс одним тапом (за ним стоит `?start=DELpmev_…`).
+* Deep-link ✏️ открывает [панель редактирования](#%EF%B8%8F-редактирование-конкретного-события) для этого оддса.
 
 <!-- screenshot: список Polymarket Events -->
 
@@ -59,10 +68,7 @@
 
 ## ⚡ Быстрый доступ
 
-* **`/polymarket`** — открывает watchlist напрямую. Ответ принимает одну из трёх форм:
-  * **Empty** — `"You are not tracking any Polymarket events yet"` плюс клавиатура из 4 кнопок.
-  * **Populated** — `"Your Polymarket Events Watchlist"` с инлайн-ссылками 🗑 / ✏️ в каждой строке.
-  * **Upsell** — появляется при превышении лимита плана, единственная кнопка — **Build Custom Plan**.
+* **`/polymarket`** — открывает watchlist напрямую. См. [Anatomy of `/polymarket`](./polymarket.md#-anatomy-of-polymarket) для разбора трёх форм ответа (empty, populated, upsell).
 * `/menu` → `Tracking` → `Polymarket Events` — то же место, один лишний хоп.
 * Пересылка любой ссылки `polymarket.com/event/<slug>` в чат — добавляет новое событие, не выходя из диалога.
 

@@ -1,22 +1,43 @@
 # Polymarket
 
-## 📊 Real-Time Prediction Market Monitoring
+## 🎯 What is Polymarket?
 
-Drops Bot delivers **instant, real-time alerts** for Polymarket prediction market activity on the **Polygon network** — straight to your Telegram. Whether you are tracking a single event or watching whale wallets that bet on Polymarket, the bot keeps you in the loop without you ever leaving the chat.
+[Polymarket](https://polymarket.com) is a decentralized prediction market on the **Polygon** blockchain. Users buy and sell **shares** of binary outcomes — `YES` or `NO` — on real-world questions: elections, sports, crypto prices, weather, you name it.
+
+Share prices are quoted in cents (`0¢–100¢`) and reflect the market's implied probability of the outcome. A `YES` share at `23.4¢` means the market is pricing the event at a ≈23.4 % chance of happening. When an event resolves, winning shares pay `$1` each; losing shares pay `$0`.
+
+> [!NOTE]
+> Drops Bot does **not** trade for you. It only monitors Polymarket activity and reports it via Telegram — what you do with that information is up to you.
+
+## 📊 What Drops Bot adds
+
+Drops Bot delivers **instant, real-time alerts** for Polymarket activity on Polygon — straight to your Telegram. You don't need a Polymarket account, you don't sign transactions, and your funds are never touched. The bot reads public on-chain data and surfaces it.
 
 > [!NOTE]
 > Polymarket Event Tracking launched on **March 10, 2026** and is available across all subscription plans. Limits scale with your plan tier — see [Plan Limits](./plan-limits.md).
 
 <!-- screenshot: Polymarket section in the bot's Tracking menu -->
 
-## 🔍 What You Can Track
+## 🔍 Two Ways to Track
 
-Drops Bot supports **two tracking modes**, each suited to a different use case:
+| Mode | What it watches | How to set up |
+|---|---|---|
+| 🟦 **Event Tracking** | One specific market, regardless of who trades on it | Forward a `polymarket.com/event/<slug>` URL to the bot, or `/polymarket → Add Event/Wallet` |
+| 🔁 **Wallet Polymarket Activity** | One wallet's Polymarket trades, across every market it touches | Toggle Polymarket in the wallet's `Filters → Events` ([details](./wallet-activity.md)) |
 
-* 🟦 **Polymarket Events** — Track a specific market by forwarding its event link to the bot. You receive alerts whenever odds shift, large positions enter or exit, or volume spikes on that market.
-* 🔁 **Wallet Polymarket Activity** — Watch a wallet, and the bot will surface every Polymarket trade it makes on Polygon — buys, sells, position adjustments — in real time.
+The two modes complement each other — track a few hot markets directly, and let wallet monitoring surface everything else.
 
-The two modes complement each other: track a few hot markets directly, and let wallet monitoring surface everything else.
+## 🧭 Anatomy of `/polymarket`
+
+`/polymarket` is the master command. Type it to open your watchlist. The reply takes one of three shapes:
+
+| State | When it shows | Body |
+|---|---|---|
+| **Empty** | No odds tracked yet | `"You are not tracking any Polymarket events yet"` plus a 4-button keyboard: **Add Event/Wallet**, **Polymarket Wallets**, **Trending Events**, **Back**. |
+| **Populated** | You have ≥ 1 tracked odd | `"Your Polymarket Events Watchlist"` listing rows like `🟦 Will <outcome>? <price>¢`, each with inline 🗑 (remove) and ✏️ (edit) deep-links. |
+| **Upsell** | Plan limit hit | A card whose only CTA is **Build Custom Plan** — see [Plan Limits](./plan-limits.md). |
+
+You can also reach the watchlist via `/menu → Tracking → Polymarket Events`, or add a new event by forwarding any `polymarket.com/event/<slug>` URL straight into the bot chat.
 
 ## 🌐 Network Coverage
 
@@ -32,15 +53,28 @@ Polymarket Events on Drops Bot operate exclusively on **Polygon**.
 * **Whale watchers** — Tag wallets known for large Polymarket positions and get pinged the moment they move size.
 * **Community / channel admins** — Route Polymarket alerts to a Telegram group or channel via [Bot for Groups and Channels](https://etherdrops.gitbook.io/etherdrops-bot/advanced-tools/bot-for-groups-and-channels) and keep your audience updated automatically.
 
+## 📖 Glossary
+
+Terms used throughout these docs:
+
+| Term | Meaning |
+|---|---|
+| **Event** | A parent market on Polymarket — one question with a single resolution date (e.g., *"2026 FIFA World Cup Winner"*). |
+| **Outcome** | A specific possibility within an event (e.g., *"France wins YES"*). Multi-outcome events split a question into many `YES` / `NO` bets. |
+| **Odd** | Drops Bot's UI label for a tracked outcome. Each row in `/polymarket` is one odd. You can edit / delete each odd independently. |
+| **Share** | A position unit on Polymarket. A `YES` share pays `$1` if the outcome resolves true, `$0` otherwise. |
+| **Price (¢)** | Per-share price in cents. Equivalent to the market's implied probability — e.g., `23.4¢` ≈ 23.4 % chance. |
+| **Resolution** | The moment an event's outcome is finalized and shares pay out. Tracking stops automatically at resolution. |
+| **Share-swap** | A trade where shares change hands directly between users on the order book — the data source for **♻️ Swaps Alert**. |
+| **Volume** | Cumulative USD value of trades on a market. Used by **📊 Volume Target** alerts. |
+
 ## 🚀 Get Started
 
-* 👉 [**Polymarket Quickstart**](./quickstart.md) — Track your first event in under 60 seconds.
-* ➕ [Add Polymarket Event](./add-event.md) — Full walkthrough of event link tracking.
-* 🔁 [Wallet Polymarket Activity](./wallet-activity.md) — Enable Polymarket alerts for watched wallets.
-* 🛠️ [Event Management](./event-management.md) — View, edit, and remove tracked events.
-* 🔔 [Configuring Polymarket Alerts](./alerts-and-filters.md) — Tune notification frequency and filters.
-* 💳 [Plan Limits](./plan-limits.md) — How many events your tier supports.
-* ❓ [FAQ & Troubleshooting](./faq-and-troubleshooting.md) — Common questions answered.
+* 👉 [**Quickstart**](./quickstart.md) — Track your first event in under 60 seconds.
+* 🔁 [**Wallet Polymarket Activity**](./wallet-activity.md) — Watch wallets that bet on Polymarket.
+* ❓ [**FAQ & Troubleshooting**](./faq-and-troubleshooting.md) — Common questions answered.
+
+For the full page list, see the [section index](../README.md).
 
 ## ❓ FAQ
 
@@ -61,14 +95,14 @@ No. Drops Bot is **observation-only** — it surfaces activity so you can react 
 <details>
 <summary>Is there an extra fee for Polymarket tracking?</summary>
 
-No. Polymarket Events are included in every plan; only the per-plan **event limit** differs. See [Plan Limits](./plan-limits.md).
+No. Polymarket Events are included in every plan; only the per-plan **odd limit** differs. See [Plan Limits](./plan-limits.md).
 
 </details>
 
 <details>
-<summary>Where do I find Polymarket in the bot menu?</summary>
+<summary>What's the difference between an event, an outcome, and an odd?</summary>
 
-Type **`/polymarket`** to open your watchlist directly. You can also reach it via `/menu → Tracking → Polymarket Events`, or add a new event by forwarding any `polymarket.com/event/<slug>` URL straight into the bot chat.
+The **event** is the parent market ("2026 FIFA World Cup Winner"). Each **outcome** is one possibility (France YES, Spain YES, …). When you track an outcome in the bot, that tracked row is called an **odd** — see the [Glossary](#-glossary) above.
 
 </details>
 

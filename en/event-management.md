@@ -9,11 +9,20 @@ Once you've added a few Polymarket events, you'll want a single place to review,
 
 ## 👀 Viewing All Tracked Events
 
-Type **`/polymarket`** to open your watchlist directly. The body is titled **`Your Polymarket Events Watchlist`**. Each tracked odd appears as a row containing:
+Type **`/polymarket`** to open your watchlist directly. The body is titled **`Your Polymarket Events Watchlist`**, with one row per tracked odd. Each row carries the outcome label, the current price, and inline deep-links for quick actions.
 
-* The event title and chosen outcome (e.g. `🟦 Will <outcome>? <price>¢`)
-* An inline 🗑 deep-link to remove the odd in one tap (backed by a `?start=DELpmev_…` start parameter)
-* An inline ✏️ deep-link that opens the edit panel for this odd
+**Approximate layout** (mock-up — replace with a real screenshot once captured):
+
+```
+Your Polymarket Events Watchlist
+
+🟦 Will France win the 2026 FIFA World Cup? — YES · 17.4¢   🗑 ✏️
+🟦 Will Spain reach the 2026 World Cup final? — YES · 31.8¢   🗑 ✏️
+🟦 Bitcoin above $120k on May 16 — NO · 64.0¢                🗑 ✏️
+```
+
+* The 🗑 deep-link removes the odd in one tap (backed by a `?start=DELpmev_…` start parameter).
+* The ✏️ deep-link opens the [edit panel](#-editing-a-specific-event) for this odd.
 
 <!-- screenshot: Polymarket Events list view -->
 
@@ -61,10 +70,7 @@ In the event's edit panel, tap **🗑️ Remove**. Confirmation prompt → tap *
 
 ## ⚡ Quick Access
 
-* **`/polymarket`** — opens the watchlist directly. The reply takes one of three shapes:
-  * **Empty** — `"You are not tracking any Polymarket events yet"` plus the 4-button entry keyboard.
-  * **Populated** — `"Your Polymarket Events Watchlist"` with 🗑 / ✏️ inline links per row.
-  * **Upsell** — shown when your plan limit is exceeded, carrying a **Build Custom Plan** CTA.
+* **`/polymarket`** — opens the watchlist directly. See [Anatomy of `/polymarket`](./polymarket.md#-anatomy-of-polymarket) for the three reply shapes (empty, populated, upsell).
 * `/menu` → `Tracking` → `Polymarket Events` — same destination, one extra hop.
 * Forwarding any `polymarket.com/event/<slug>` URL into the chat — adds a new event without leaving the conversation.
 

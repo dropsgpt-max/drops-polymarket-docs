@@ -30,11 +30,7 @@ No. Tracking is read-only. You provide the bot with public event URLs and/or wat
 <details>
 <summary>Is there a shortcut command for Polymarket?</summary>
 
-Yes — **`/polymarket`** opens your watchlist directly. The reply has three possible shapes:
-
-* **Empty state** — `"You are not tracking any Polymarket events yet"` plus a 4-button keyboard: **Add Event/Wallet**, **Polymarket Wallets**, **Trending Events**, **Back**.
-* **Populated state** — `"Your Polymarket Events Watchlist"` listing your tracked odds with inline 🗑 (remove) and ✏️ (edit) deep-links per row.
-* **Upsell state** — shown when your plan limit is hit. The only CTA is **Build Custom Plan**.
+Yes — **`/polymarket`** opens your watchlist directly. The reply has three shapes (empty / populated / upsell) — see [Anatomy of `/polymarket`](./polymarket.md#-anatomy-of-polymarket) for the full breakdown.
 
 You can also add events by forwarding a `polymarket.com/event/<slug>` URL into the chat, or reach the watchlist via `/menu → Tracking → Polymarket Events`.
 
