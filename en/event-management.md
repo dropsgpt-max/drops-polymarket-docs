@@ -10,28 +10,29 @@ Polymarket Event management follows the same UX pattern as **Coin Management** i
 
 ## 👀 Viewing All Tracked Events
 
-`Main Menu → Tracking → Polymarket Events` opens the full list. Each row shows:
+Type **`/polymarket`** to open your watchlist directly. The body is titled **`Your Polymarket Events Watchlist`**. Each tracked odd appears as a row containing:
 
-* The event title
-* Current odds / leading outcome
-* 24h volume
-* Quick-action buttons (Edit, Remove)
+* The event title and chosen outcome (e.g. `🟦 Will <outcome>? <price>¢`)
+* An inline 🗑 deep-link to remove the odd in one tap (backed by a `?start=DELpmev_…` start parameter)
+* An inline ✏️ deep-link that opens the edit panel for this odd
 
 <!-- screenshot: Polymarket Events list view -->
 
-For long lists, paginate with the navigation buttons under the message. <!-- VERIFY: confirm pagination identical to wallet list pagination -->
+Below the body, a 4-button entry keyboard provides **Add Event/Wallet**, **Polymarket Wallets**, **Trending Events**, and **Back**. The keyboard auto-collapses when the watchlist grows long.
 
 ## ✏️ Editing a Specific Event
 
-Tap an event row, then **Edit**, to open its individual settings panel.
+Tap the ✏️ deep-link on the watchlist row. The edit panel opens as a 7-row keyboard:
 
-You can change:
+* **🔈 Notifications** — ON/OFF for this odd (🔈 on / 🔇 off)
+* **📉 Price Change** — percentage-move threshold
+* **🚨 Price Target** — absolute price target (in ¢)
+* **♻️ Swaps Alert** — alerts on share-swap trades
+* **📊 Volume Target** — cumulative-volume threshold
+* **🗑 Delete** — stop tracking this odd
+* **↩ Back** — return to the watchlist
 
-* **🔔 Alert frequency** — how often the bot is allowed to ping you for this event
-* **📈 Price-move threshold** — minimum odds shift (e.g. ≥ 5 percentage points) before an alert fires
-* **💰 Trade-size threshold** — minimum USD-equivalent trade size that qualifies as a "whale" alert
-* **🔕 Mute schedule** — quiet hours specific to this event
-<!-- VERIFY: exact per-event setting names and presence of mute schedule per event -->
+See [Configuring Polymarket Alerts](./alerts-and-filters.md) for what each threshold does.
 
 Per-event overrides win over the global Polymarket settings. To roll back, hit **Reset to global**.
 
@@ -63,8 +64,12 @@ In the event's edit panel, tap **🗑️ Remove**. Confirmation prompt → tap *
 
 ## ⚡ Quick Access
 
-* `/menu` → `Tracking` → `Polymarket Events` — full UI
-* `/edit` → `Polymarket Events` — jump straight to edit mode <!-- VERIFY: shortcut command availability for Polymarket -->
+* **`/polymarket`** — opens the watchlist directly. The reply takes one of three shapes:
+  * **Empty** — `"You are not tracking any Polymarket events yet"` plus the 4-button entry keyboard.
+  * **Populated** — `"Your Polymarket Events Watchlist"` with 🗑 / ✏️ inline links per row.
+  * **Upsell** — shown when your plan limit is exceeded, carrying a **Build Custom Plan** CTA.
+* `/menu` → `Tracking` → `Polymarket Events` — same destination, one extra hop.
+* Forwarding any `polymarket.com/event/<slug>` URL into the chat — adds a new event without leaving the conversation.
 
 ## ❓ FAQ
 

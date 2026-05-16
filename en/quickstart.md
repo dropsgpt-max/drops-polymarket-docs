@@ -19,16 +19,16 @@ You don't need to configure anything to start receiving Polymarket alerts. Open 
 
 Go to [polymarket.com](https://polymarket.com), find the market you want to follow, and open its dedicated page.
 
-<!-- screenshot: a Polymarket event page with the URL bar highlighted -->
+![Polymarket event page — copy the URL from the address bar at the top](../../../media/screenshots/polymarket/event-page.png)
 {% endstep %}
 
 {% step %}
 ### Copy the event link
 
-Copy the URL from the browser address bar. Any direct event URL works — short or long, with or without query parameters.
+Copy the URL from the browser address bar. The bot accepts URLs of the form `https://polymarket.com/event/<slug>` (with or without query parameters).
 
 {% hint style="warning" %}
-The link must point to a **specific event**, not the Polymarket home page or a category listing. <!-- VERIFY: confirm exact URL pattern accepted by the bot -->
+**Event URL only.** Category listings (`polymarket.com/markets`, `/sports`, etc.) and the Polymarket home page are rejected — make sure the URL contains `/event/` followed by a slug.
 {% endhint %}
 {% endstep %}
 

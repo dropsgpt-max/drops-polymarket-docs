@@ -24,14 +24,17 @@ The global panel exposes:
 
 ## 📝 Individual Event Settings
 
-For any specific event in your list (`Polymarket Events → tap event → Edit`):
+Open `/polymarket → tap an odd's ✏️ deep-link`. The edit panel is a single 7-row keyboard with one button per setting:
 
-* **🔀 Override price-move threshold** — set tighter or looser than global for this market.
-* **💵 Override whale threshold** — useful when a market has unusual size distribution.
-* **🔔 Per-event frequency** — keep this event real-time even when global is on Digest, or vice versa.
-* **🚫 Mute this event** — temporary mute without removing the event from your list.
+* **🔈 Notifications** — master ON/OFF for this odd. The icon encodes state: **🔈** = enabled, **🔇** = muted.
+* **📉 Price Change** — fires when the odd's price moves by at least the configured percentage.
+* **🚨 Price Target** — fires when the odd crosses a specific absolute price level (in ¢).
+* **♻️ Swaps Alert** — fires on share-swap trades occurring on the market.
+* **📊 Volume Target** — fires when cumulative volume crosses a configured USD threshold.
+* **🗑 Delete** — stops tracking this odd.
+* **↩ Back** — return to the watchlist.
 
-Per-event overrides apply on top of global defaults. The summary panel shows you which fields are overridden.
+Tapping any of the four threshold buttons opens a value picker; the current value is shown in the button label after a colon (e.g. `📉 Price Change: 5%`).
 
 ## 🎚️ Telegram Notification Routing
 

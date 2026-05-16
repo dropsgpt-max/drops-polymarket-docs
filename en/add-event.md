@@ -17,7 +17,7 @@ Adding a Polymarket event tells the bot to watch **one specific market** and not
 
 Open the Polymarket event you want to follow. It can be a single binary market, a multi-outcome market, or a derived market — what matters is that the URL points to one event.
 
-<!-- screenshot: Polymarket event page in browser -->
+![Polymarket multi-outcome event page in the browser](../../../media/screenshots/polymarket/event-page.png)
 {% endstep %}
 
 {% step %}
@@ -29,12 +29,14 @@ From the browser address bar, copy the full URL. Mobile share-sheet "Copy Link" 
 {% step %}
 ### Send the link to Drops Bot
 
-Open your Drops Bot chat in Telegram and paste the link. The bot detects the Polymarket domain and replies with a preview of the event:
+Open your Drops Bot chat in Telegram and paste the link. The bot detects the Polymarket domain and replies with the **odds-selection screen**:
 
-* Event title
-* Current odds (Yes / No or per-outcome)
-* 24h volume
-* Resolution date (if available)
+* The event title in the message body
+* `Expires:` line — resolution date
+* `Select ✅ Odds to Track:` header
+* One row per outcome in the form `🟦 Will <outcome>? <price>¢`
+* Action buttons: **Select All Yes**, **Select All No**, **Back**
+* For events with more than 10 outcomes, a pagination row appears: `⏪ ⬅️ 1 ➡️ ⏩` (10 odds per page)
 
 <!-- screenshot: bot preview message for a Polymarket event -->
 {% endstep %}
@@ -42,7 +44,7 @@ Open your Drops Bot chat in Telegram and paste the link. The bot detects the Pol
 {% step %}
 ### Confirm
 
-Tap **Track Event** to add it to your watchlist. Tap **Cancel** to discard.
+Pick individual outcomes by tapping their rows, or tap **Select All Yes** / **Select All No** to track all outcomes at once. Each selected odd gets a ✅ marker. **Back** discards the selection.
 
 {% hint style="success" %}
 **Tracking active.** Alerts begin immediately based on your current [alert settings](./alerts-and-filters.md). Default thresholds are conservative — tune them later if you want more or fewer pings.
@@ -97,7 +99,7 @@ Tracking stops automatically once the market resolves. The event remains in your
 <details>
 <summary>Can I track multiple outcomes of one event?</summary>
 
-Yes. Multi-outcome markets are tracked as a single event — alerts fire on movement in any outcome.
+Yes. The odds-selection screen lets you pick individual outcomes one by one, or hit **Select All Yes** / **Select All No** to track every outcome at once. Each tracked odd appears as its own row in `/polymarket` and can be edited (✏️) or removed (🗑) independently.
 
 </details>
 

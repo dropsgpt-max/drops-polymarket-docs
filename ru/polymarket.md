@@ -70,7 +70,7 @@ Polymarket Events в Drops Bot работают только в сети **Polyg
 <details>
 <summary>Где найти Polymarket в меню бота?</summary>
 
-`Main Menu → Tracking → Polymarket Events`. Новые события также можно добавить, переслав ссылку на событие прямо с Polymarket в чат бота.
+Введите **`/polymarket`**, чтобы открыть watchlist напрямую. Также доступ есть через `/menu → Tracking → Polymarket Events`, либо новое событие можно добавить, переслав в чат бота любую ссылку вида `polymarket.com/event/<slug>`.
 
 </details>
 

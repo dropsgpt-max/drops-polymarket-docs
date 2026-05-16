@@ -70,7 +70,7 @@ No. Polymarket Events are included in every plan; only the per-plan **event limi
 <details>
 <summary>Where do I find Polymarket in the bot menu?</summary>
 
-`Main Menu → Tracking → Polymarket Events`. New events can also be added by forwarding an event link to the bot directly from Polymarket.
+Type **`/polymarket`** to open your watchlist directly. You can also reach it via `/menu → Tracking → Polymarket Events`, or add a new event by forwarding any `polymarket.com/event/<slug>` URL straight into the bot chat.
 
 </details>
 

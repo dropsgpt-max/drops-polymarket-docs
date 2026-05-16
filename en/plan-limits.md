@@ -25,20 +25,18 @@ The **Polymarket Events** quota — the number of markets you can track at event
 When you reach your plan limits (e.g., wallets, Polymarket events, coins, NFTs), the bot will notify you and suggest options:
 
 * Remove an old event to free a slot
-* Upgrade to a higher tier via **💳 Upgrade Subscription Plan**
-* Switch to a Custom plan for granular allowances
+* Tap **Build Custom Plan** on the upsell card the bot returns
+* Open `/menu` and navigate to the Subscription section for an upgrade
 
 You won't lose any of your existing events — adding new ones simply stops working until you free space or upgrade.
 
+When you hit the limit, the `/polymarket` reply itself switches to the **upsell shape**: instead of your watchlist you'll see a card whose only CTA is **Build Custom Plan**.
+
 ## 💳 Upgrade Path
 
-Upgrading is handled inside the bot:
+The fastest path is the **Build Custom Plan** button on the upsell card. It opens the plan-builder where Polymarket Events, Wallets, Coins, and NFTs can each be sized independently.
 
-```
-Main Menu → 💳 Subscription → Upgrade
-```
-
-For detailed plan comparison (price, all quotas, payment methods), see the [main Subscription docs](https://etherdrops.gitbook.io/etherdrops-bot/). Polymarket limits are listed alongside Wallets, Coins, and NFTs.
+For detailed plan comparison (price, all quotas, payment methods), see the [main Subscription docs](https://etherdrops.gitbook.io/etherdrops-bot/).
 
 ## 🧹 Account Deletion & Data Cleanup
 
