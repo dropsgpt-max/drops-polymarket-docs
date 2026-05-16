@@ -1,0 +1,96 @@
+# Polymarket Plan Limits
+
+## 💳 How Many Events You Can Track
+
+The **Polymarket Events** quota — the number of markets you can track at event-level — scales with your subscription tier. Wallet-level Polymarket Activity (see [Wallet Activity](./wallet-activity.md)) uses your separate **Wallets** quota and is not affected by the limits below.
+
+## 📋 Polymarket Events by Plan
+
+| Plan | Polymarket Events |
+|---|---|
+| **Free / Basic** | 20 |
+| **Advanced** | 100 |
+| **Pro** | 500 |
+| **Wallet Sniper** | 500 |
+| **Custom** | Configurable |
+
+{% hint style="info" %}
+**Custom plans** let you set the Polymarket Events limit independently of other quotas. Useful if you want, say, the Free wallet limit but a Pro-level Polymarket allowance.
+{% endhint %}
+
+<!-- VERIFY: confirm exact plan names. The mirror lists 20/100/500/500/Configurable; plan labels reconstructed from context. -->
+
+## 📈 What Happens When You Hit the Limit
+
+When you reach your plan limits (e.g., wallets, Polymarket events, coins, NFTs), the bot will notify you and suggest options:
+
+* Remove an old event to free a slot
+* Upgrade to a higher tier via **💳 Upgrade Subscription Plan**
+* Switch to a Custom plan for granular allowances
+
+You won't lose any of your existing events — adding new ones simply stops working until you free space or upgrade.
+
+## 💳 Upgrade Path
+
+Upgrading is handled inside the bot:
+
+```
+Main Menu → 💳 Subscription → Upgrade
+```
+
+For detailed plan comparison (price, all quotas, payment methods), see the [main Subscription docs](https://etherdrops.gitbook.io/etherdrops-bot/). Polymarket limits are listed alongside Wallets, Coins, and NFTs.
+
+## 🧹 Account Deletion & Data Cleanup
+
+Deleting your account permanently removes your **tracked wallets and Polymarket Events** along with all settings.
+
+{% hint style="warning" %}
+**Polymarket cleanup was fixed on April 9, 2026.** Earlier versions of the bot left orphaned Polymarket event records after account deletion. If you deleted an account before that date and are starting fresh, contact support to ensure stale records are cleared.
+{% endhint %}
+
+## ❓ FAQ
+
+<details>
+<summary>Do resolved events still count against my limit?</summary>
+
+Resolved events stop generating alerts but may remain in your list as historical records. Bulk-remove them periodically to free slots. <!-- VERIFY: confirm whether resolved events occupy quota -->
+
+</details>
+
+<details>
+<summary>Does Wallet Polymarket Activity count toward the Polymarket Events quota?</summary>
+
+No. Wallet-level Polymarket activity is metered against your **Wallets** quota, not the Polymarket Events quota. The two limits are independent.
+
+</details>
+
+<details>
+<summary>Can I get a higher Polymarket limit without raising my wallet limit?</summary>
+
+Yes — switch to a **Custom plan**, which lets you configure each quota independently.
+
+</details>
+
+<details>
+<summary>What's the difference between Pro and Wallet Sniper for Polymarket?</summary>
+
+Both currently offer the same **500-event** Polymarket allowance. Differences between the two plans are in wallet allowances, alert features, and pricing — not Polymarket-specific. <!-- VERIFY: plan label semantics -->
+
+</details>
+
+## 🔧 Troubleshooting
+
+| Issue | Likely Cause | Fix |
+|---|---|---|
+| "Limit reached" on adding | At plan cap | Remove an event or upgrade |
+| Count seems wrong | Resolved events still counted | Bulk-remove resolved events |
+| Upgraded but limit unchanged | Telegram cache | Send `/menu` to refresh; if still stale, restart the chat |
+| Custom plan limit not applied | Plan configuration pending | Check `💳 Subscription` for current effective limits |
+
+---
+
+# Agent Instructions: Querying This Documentation
+
+If you need additional information that is not directly available on this page, you can query the documentation dynamically by asking a question.
+
+Perform an HTTP GET request on this page's URL with the `ask` query parameter set to your question (URL-encoded). The response will contain context tailored to your query, drawn from the full EtherDrops Bot documentation.
