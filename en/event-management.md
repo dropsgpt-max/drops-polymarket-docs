@@ -4,9 +4,8 @@
 
 Once you've added a few Polymarket events, you'll want a single place to review, edit, and clean them up. This page covers the day-to-day housekeeping flow.
 
-{% hint style="info" %}
-Polymarket Event management follows the same UX pattern as **Coin Management** in the bot — list view, single-item edit, bulk operations. If you're used to managing coins, this will feel identical.
-{% endhint %}
+> [!NOTE]
+> Polymarket Event management follows the same UX pattern as **Coin Management** in the bot — list view, single-item edit, bulk operations. If you're used to managing coins, this will feel identical.
 
 ## 👀 Viewing All Tracked Events
 
@@ -44,9 +43,8 @@ For changes that apply across every Polymarket event you're tracking:
 
 This applies a single change (e.g. raise all price-move thresholds to 10 pp) across the whole list in one step. Use it when you want to reduce noise globally without touching each event individually.
 
-{% hint style="warning" %}
-**Bulk edit overwrites per-event overrides.** If you've fine-tuned individual events, bulk-editing the same parameter will reset those fine-tunings. Confirm twice before applying.
-{% endhint %}
+> [!WARNING]
+> **Bulk edit overwrites per-event overrides.** If you've fine-tuned individual events, bulk-editing the same parameter will reset those fine-tunings. Confirm twice before applying.
 
 ## 🗑️ Removing an Event
 
@@ -58,9 +56,8 @@ In the event's edit panel, tap **🗑️ Remove**. Confirmation prompt → tap *
 
 `Polymarket Events → ⚙️ Bulk → Remove`. Select multiple events or remove all. The freed slots become immediately available to add new events.
 
-{% hint style="warning" %}
-**Resolved markets aren't auto-removed.** Markets that have already resolved stay in your list as a historical record. They don't generate new alerts, but they may still occupy a slot. Periodically clean them up with bulk removal. <!-- VERIFY: confirm whether resolved events occupy slots -->
-{% endhint %}
+> [!WARNING]
+> **Resolved markets aren't auto-removed.** Markets that have already resolved stay in your list as a historical record. They don't generate new alerts, but they may still occupy a slot. Periodically clean them up with bulk removal. <!-- VERIFY: confirm whether resolved events occupy slots -->
 
 ## ⚡ Quick Access
 
@@ -108,6 +105,15 @@ Yes. Removal clears all per-event overrides. Re-adding the event starts fresh wi
 
 # Agent Instructions: Querying This Documentation
 
-If you need additional information that is not directly available on this page, you can query the documentation dynamically by asking a question.
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
 
-Perform an HTTP GET request on this page's URL with the `ask` query parameter set to your question (URL-encoded). The response will contain context tailored to your query, drawn from the full EtherDrops Bot documentation.
+Perform an HTTP GET request on the current page URL with the `ask` query parameter:
+
+```
+GET https://etherdrops.gitbook.io/etherdrops-bot/<page-path>.md?ask=<question>
+```
+
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

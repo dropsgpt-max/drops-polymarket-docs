@@ -14,9 +14,8 @@
 | **Wallet Sniper** | 500 |
 | **Custom** | Настраивается |
 
-{% hint style="info" %}
-**Custom-планы** позволяют установить лимит Polymarket Events независимо от остальных квот. Полезно, если вам нужен, например, Free-лимит на кошельки, но Pro-уровень аллокации Polymarket.
-{% endhint %}
+> [!NOTE]
+> **Custom-планы** позволяют установить лимит Polymarket Events независимо от остальных квот. Полезно, если вам нужен, например, Free-лимит на кошельки, но Pro-уровень аллокации Polymarket.
 
 <!-- VERIFY: подтвердить точные названия планов. В зеркале значения 20/100/500/500/Configurable; названия реконструированы по контексту. -->
 
@@ -42,9 +41,8 @@
 
 Удаление аккаунта безвозвратно удаляет ваши **отслеживаемые кошельки и Polymarket Events** вместе со всеми настройками.
 
-{% hint style="warning" %}
-**Очистка Polymarket была исправлена 9 апреля 2026.** Более ранние версии бота оставляли «сиротские» записи Polymarket-событий после удаления аккаунта. Если вы удаляли аккаунт до этой даты и начинаете заново, обратитесь в поддержку — пусть убедятся, что устаревшие записи очищены.
-{% endhint %}
+> [!WARNING]
+> **Очистка Polymarket была исправлена 9 апреля 2026.** Более ранние версии бота оставляли «сиротские» записи Polymarket-событий после удаления аккаунта. Если вы удаляли аккаунт до этой даты и начинаете заново, обратитесь в поддержку — пусть убедятся, что устаревшие записи очищены.
 
 ## ❓ FAQ
 
@@ -89,6 +87,15 @@
 
 # Agent Instructions: Querying This Documentation
 
-If you need additional information that is not directly available on this page, you can query the documentation dynamically by asking a question.
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
 
-Perform an HTTP GET request on this page's URL with the `ask` query parameter set to your question (URL-encoded). The response will contain context tailored to your query, drawn from the full EtherDrops Bot documentation.
+Perform an HTTP GET request on the current page URL with the `ask` query parameter:
+
+```
+GET https://etherdrops.gitbook.io/etherdrops-bot/<page-path>.md?ask=<question>
+```
+
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

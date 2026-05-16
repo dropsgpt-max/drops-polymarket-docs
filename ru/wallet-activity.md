@@ -4,9 +4,8 @@
 
 Если [Добавить Polymarket Event](./add-event.md) следит за **одним рынком независимо от того, кто на нём торгует**, то Wallet Polymarket Activity делает обратное — следит за **одним кошельком на всех рынках Polymarket, которые он трогает**. Сочетание двух режимов закрывает оба конца потока.
 
-{% hint style="info" %}
-Wallet Polymarket Activity — это **per-wallet тоггл** внутри уже существующего флоу трекинга кошельков. Не нужно добавлять кошельки отдельно — вы просто включаете Polymarket как тип события на уже отслеживаемых кошельках.
-{% endhint %}
+> [!NOTE]
+> Wallet Polymarket Activity — это **per-wallet тоггл** внутри уже существующего флоу трекинга кошельков. Не нужно добавлять кошельки отдельно — вы просто включаете Polymarket как тип события на уже отслеживаемых кошельках.
 
 ## 🎯 Как это работает
 
@@ -22,43 +21,29 @@ Wallet → Filters → Events → Polymarket
 
 ## 🪜 Включить Polymarket на отслеживаемом кошельке
 
-{% stepper %}
-
-{% step %}
-### Откройте список кошельков
+### 1. Откройте список кошельков
 
 `Main Menu → Tracking → Wallets`, нажмите на нужный кошелёк (или используйте `/edit`, если предпочитаете команды).
 
 <!-- screenshot: список кошельков -->
-{% endstep %}
 
-{% step %}
-### Перейдите в Filters → Events
+### 2. Перейдите в Filters → Events
 
 Нажмите **Filters**, затем **Events**. Появится список типов событий: Transfers, Swaps, NFT Transfers, Approvals, Polymarket и т.д.
-{% endstep %}
 
-{% step %}
-### Включите тоггл Polymarket
+### 3. Включите тоггл Polymarket
 
 Переключите **Polymarket** в положение ON.
 
-{% hint style="info" %}
-**Состояние по умолчанию.** С релиза 9 апреля 2026 тоггл Polymarket по умолчанию **включён** для новых кошельков. <!-- VERIFY: подтвердить default state -->
-{% endhint %}
-{% endstep %}
+> [!NOTE]
+> **Состояние по умолчанию.** С релиза 9 апреля 2026 тоггл Polymarket по умолчанию **включён** для новых кошельков. <!-- VERIFY: подтвердить default state -->
 
-{% step %}
-### Сохраните и выйдите
+### 4. Сохраните и выйдите
 
 Подтвердите изменения. Следующая Polymarket-сделка этого кошелька на Polygon прилетит в Telegram.
 
-{% hint style="success" %}
-**Трекинг активен.** Дополнительная настройка не нужна. Кошелёк теперь будет генерировать Polymarket-алерты в дополнение к остальным включённым событиям.
-{% endhint %}
-{% endstep %}
-
-{% endstepper %}
+> [!TIP]
+> **Трекинг активен.** Дополнительная настройка не нужна. Кошелёк теперь будет генерировать Polymarket-алерты в дополнение к остальным включённым событиям.
 
 ## 📨 Как выглядит алерт
 
@@ -122,6 +107,15 @@ Wallet → Filters → Events → Polymarket
 
 # Agent Instructions: Querying This Documentation
 
-If you need additional information that is not directly available on this page, you can query the documentation dynamically by asking a question.
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
 
-Perform an HTTP GET request on this page's URL with the `ask` query parameter set to your question (URL-encoded). The response will contain context tailored to your query, drawn from the full EtherDrops Bot documentation.
+Perform an HTTP GET request on the current page URL with the `ask` query parameter:
+
+```
+GET https://etherdrops.gitbook.io/etherdrops-bot/<page-path>.md?ask=<question>
+```
+
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

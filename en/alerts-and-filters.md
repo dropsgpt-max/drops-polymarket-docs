@@ -4,9 +4,8 @@
 
 Polymarket alerts are tunable at **two levels**: globally (defaults applied to every Polymarket event you track) and individually (per-event overrides). This page walks through both.
 
-{% hint style="info" %}
-**Inheritance rule.** When you add a new event, it inherits the current **global** settings. Per-event overrides are applied on top and never affect the global preset.
-{% endhint %}
+> [!NOTE]
+> **Inheritance rule.** When you add a new event, it inherits the current **global** settings. Per-event overrides are applied on top and never affect the global preset.
 
 ## 🌐 Global Polymarket Options
 
@@ -38,21 +37,17 @@ Tapping any of the four threshold buttons opens a value picker; the current valu
 
 ## 🎚️ Telegram Notification Routing
 
-{% tabs %}
+**Personal chat**
 
-{% tab title="Personal chat" %}
 By default, all Polymarket alerts arrive in your private Drops Bot chat — same place as your other notifications.
-{% endtab %}
 
-{% tab title="Group / channel" %}
+**Group / channel**
+
 Connect a profile to a Telegram group or channel via [Bot for Groups and Channels](https://etherdrops.gitbook.io/etherdrops-bot/advanced-tools/bot-for-groups-and-channels). You can route Polymarket alerts exclusively to that group while keeping other event types in your private chat.
-{% endtab %}
 
-{% tab title="Mute schedule" %}
+**Mute schedule**
+
 Set quiet hours from `Settings → Notifications` to suppress all alerts (Polymarket included) during specific time ranges. Useful for sleep schedules or focus blocks.
-{% endtab %}
-
-{% endtabs %}
 
 ## 🧪 Recommended Presets
 
@@ -60,9 +55,8 @@ Set quiet hours from `Settings → Notifications` to suppress all alerts (Polyma
 * **Active trader** — Real-time, price-move ≥ 3 pp, whale ≥ $1,000. Expect frequent pings; better for markets you're actively positioning on.
 * **Whale-watcher** — Real-time, disable price-move alerts, whale ≥ $25,000. Only large trades come through, regardless of odds movement.
 
-{% hint style="warning" %}
-**Lowering thresholds for highly liquid markets can flood your chat.** Markets like major elections may produce dozens of whale-tier trades per hour. Start conservatively and loosen up.
-{% endhint %}
+> [!WARNING]
+> **Lowering thresholds for highly liquid markets can flood your chat.** Markets like major elections may produce dozens of whale-tier trades per hour. Start conservatively and loosen up.
 
 ## ❓ FAQ
 
@@ -107,6 +101,15 @@ Existing events keep any **per-event overrides** they already have. Events witho
 
 # Agent Instructions: Querying This Documentation
 
-If you need additional information that is not directly available on this page, you can query the documentation dynamically by asking a question.
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
 
-Perform an HTTP GET request on this page's URL with the `ask` query parameter set to your question (URL-encoded). The response will contain context tailored to your query, drawn from the full EtherDrops Bot documentation.
+Perform an HTTP GET request on the current page URL with the `ask` query parameter:
+
+```
+GET https://etherdrops.gitbook.io/etherdrops-bot/<page-path>.md?ask=<question>
+```
+
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

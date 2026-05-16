@@ -4,53 +4,38 @@
 
 Чтобы начать получать Polymarket-алерты, не нужно ничего настраивать. Откройте интересующий рынок, перешлите ссылку боту — и всё готово: следующее движение цены прилетит в Telegram.
 
-{% hint style="info" %}
-**Что нужно заранее**
-* Активный чат с EtherDrops Bot (`/start` уже отправлен).
-* Не достигнут лимит Polymarket Events по вашему тарифу — см. [Лимиты тарифов](./plan-limits.md).
-{% endhint %}
+> [!NOTE]
+> **Что нужно заранее**
+> * Активный чат с Drops Bot (`/start` уже отправлен).
+> * Не достигнут лимит Polymarket Events по вашему тарифу — см. [Лимиты тарифов](./plan-limits.md).
 
 ## 🚀 Четыре шага
 
-{% stepper %}
-
-{% step %}
-### Откройте событие на Polymarket
+### 1. Откройте событие на Polymarket
 
 Перейдите на [polymarket.com](https://polymarket.com), найдите интересующий рынок и откройте его страницу.
 
 ![Страница события Polymarket — URL копируем из адресной строки сверху](../../../media/screenshots/polymarket/event-page.png)
-{% endstep %}
 
-{% step %}
-### Скопируйте ссылку на событие
+### 2. Скопируйте ссылку на событие
 
 Скопируйте URL из адресной строки. Бот принимает ссылки вида `https://polymarket.com/event/<slug>` (с query-параметрами или без них).
 
-{% hint style="warning" %}
-**Только URL события.** Категории (`polymarket.com/markets`, `/sports` и т.п.) и главная Polymarket не принимаются — убедитесь, что в URL есть `/event/` и slug после него.
-{% endhint %}
-{% endstep %}
+> [!WARNING]
+> **Только URL события.** Категории (`polymarket.com/markets`, `/sports` и т.п.) и главная Polymarket не принимаются — убедитесь, что в URL есть `/event/` и slug после него.
 
-{% step %}
-### Перешлите ссылку боту
+### 3. Перешлите ссылку боту
 
 Вставьте URL в чат с Drops Bot и отправьте. Бот распознает домен Polymarket и попросит подтвердить.
 
 <!-- screenshot: Telegram-чат с вставленным URL Polymarket -->
-{% endstep %}
 
-{% step %}
-### Подтвердите трекинг
+### 4. Подтвердите трекинг
 
 Нажмите **Track Event** в ответе бота. Рынок добавляется в список `🟦 Polymarket Events`, алерты начинают приходить сразу.
 
-{% hint style="success" %}
-**Готово!** Вы получите уведомление в Telegram при следующей активности, которая пересечёт ваши пороги.
-{% endhint %}
-{% endstep %}
-
-{% endstepper %}
+> [!TIP]
+> **Готово!** Вы получите уведомление в Telegram при следующей активности, которая пересечёт ваши пороги.
 
 ## ➡️ Что дальше
 
@@ -72,6 +57,15 @@
 
 # Agent Instructions: Querying This Documentation
 
-If you need additional information that is not directly available on this page, you can query the documentation dynamically by asking a question.
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
 
-Perform an HTTP GET request on this page's URL with the `ask` query parameter set to your question (URL-encoded). The response will contain context tailored to your query, drawn from the full EtherDrops Bot documentation.
+Perform an HTTP GET request on the current page URL with the `ask` query parameter:
+
+```
+GET https://etherdrops.gitbook.io/etherdrops-bot/<page-path>.md?ask=<question>
+```
+
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

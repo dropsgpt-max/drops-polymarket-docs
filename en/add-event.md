@@ -4,30 +4,22 @@
 
 Adding a Polymarket event tells the bot to watch **one specific market** and notify you when meaningful things happen on it — price shifts, large trades, volume bursts. This is the most direct way to follow markets you already care about.
 
-{% hint style="info" %}
-**Two equivalent entry points.** You can either forward an event link directly to the bot chat, or navigate via `Main Menu → Tracking → Polymarket Events → ➕ Add Event`. Both end up in the same place.
-{% endhint %}
+> [!NOTE]
+> **Two equivalent entry points.** You can either forward an event link directly to the bot chat, or navigate via `Main Menu → Tracking → Polymarket Events → ➕ Add Event`. Both end up in the same place.
 
 ## 🪜 Walkthrough
 
-{% stepper %}
-
-{% step %}
-### Pick the market
+### 1. Pick the market
 
 Open the Polymarket event you want to follow. It can be a single binary market, a multi-outcome market, or a derived market — what matters is that the URL points to one event.
 
 ![Polymarket multi-outcome event page in the browser](../../../media/screenshots/polymarket/event-page.png)
-{% endstep %}
 
-{% step %}
-### Copy the event link
+### 2. Copy the event link
 
 From the browser address bar, copy the full URL. Mobile share-sheet "Copy Link" works equally well.
-{% endstep %}
 
-{% step %}
-### Send the link to Drops Bot
+### 3. Send the link to Drops Bot
 
 Open your Drops Bot chat in Telegram and paste the link. The bot detects the Polymarket domain and replies with the **odds-selection screen**:
 
@@ -39,20 +31,15 @@ Open your Drops Bot chat in Telegram and paste the link. The bot detects the Pol
 * For events with more than 10 outcomes, a pagination row appears: `⏪ ⬅️ 1 ➡️ ⏩` (10 odds per page)
 
 <!-- screenshot: bot preview message for a Polymarket event -->
-{% endstep %}
 
-{% step %}
-### Confirm
+### 4. Confirm
 
 Pick individual outcomes by tapping their rows, or tap **Select All Yes** / **Select All No** to track all outcomes at once. Each selected odd gets a ✅ marker. **Back** discards the selection.
 
-{% hint style="success" %}
-**Tracking active.** Alerts begin immediately based on your current [alert settings](./alerts-and-filters.md). Default thresholds are conservative — tune them later if you want more or fewer pings.
-{% endhint %}
-{% endstep %}
+> [!TIP]
+> **Tracking active.** Alerts begin immediately based on your current [alert settings](./alerts-and-filters.md). Default thresholds are conservative — tune them later if you want more or fewer pings.
 
-{% step %}
-### (Optional) Adjust per-event settings
+### 5. (Optional) Adjust per-event settings
 
 Open the event in `Polymarket Events → Edit` and customise:
 
@@ -62,9 +49,6 @@ Open the event in `Polymarket Events → Edit` and customise:
 <!-- VERIFY: exact per-event setting names -->
 
 See [Configuring Polymarket Alerts](./alerts-and-filters.md) for the full settings reference.
-{% endstep %}
-
-{% endstepper %}
 
 ## 📦 Bulk Adding
 
@@ -130,6 +114,15 @@ No. Tracking is purely off-chain on the bot's side. Your wallet is not touched a
 
 # Agent Instructions: Querying This Documentation
 
-If you need additional information that is not directly available on this page, you can query the documentation dynamically by asking a question.
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
 
-Perform an HTTP GET request on this page's URL with the `ask` query parameter set to your question (URL-encoded). The response will contain context tailored to your query, drawn from the full EtherDrops Bot documentation.
+Perform an HTTP GET request on the current page URL with the `ask` query parameter:
+
+```
+GET https://etherdrops.gitbook.io/etherdrops-bot/<page-path>.md?ask=<question>
+```
+
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

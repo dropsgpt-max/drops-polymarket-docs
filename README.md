@@ -1,6 +1,6 @@
 # Polymarket — Documentation Section
 
-This folder contains the **foundational documentation** for the Polymarket tracking feature of [EtherDrops Bot](https://etherdrops.gitbook.io/etherdrops-bot/), written in the same GitBook-friendly style as the rest of the public docs and enhanced with FAQ + troubleshooting patterns from [docs.onfomo.com](https://docs.onfomo.com/).
+This folder contains the **foundational documentation** for the Polymarket tracking feature of [Drops Bot](https://etherdrops.gitbook.io/etherdrops-bot/), written in the same GitBook-friendly style as the rest of the public docs and enhanced with FAQ + troubleshooting patterns from [docs.onfomo.com](https://docs.onfomo.com/).
 
 > **Status:** drafts ready for review and screenshot insertion. Items marked `<!-- VERIFY -->` require confirmation against the live bot UI before publishing.
 
@@ -26,14 +26,16 @@ This folder contains the **foundational documentation** for the Polymarket track
 
 ## 🎨 Style conventions
 
+These docs use **portable markdown** that renders cleanly on both GitHub and GitBook:
+
 - **`# H1`** — one per page, no emoji
 - **`## H2`** — section headings, emoji prefix for visual scanning (📊 🔍 🌐 💼 🚀 ❓ 🔧)
-- **`{% hint style="info|warning|success" %}`** — GitBook callouts
-- **`{% stepper %}`** — numbered walkthroughs
-- **`{% tabs %}`** — parallel UI options
+- **`> [!NOTE]` / `> [!WARNING]` / `> [!TIP]`** — GitHub-flavored callouts (also render as plain blockquotes on GitBook)
+- **`### N. Step title`** — numbered walkthroughs (replaces GitBook's `{% stepper %}`)
+- **`**Tab title**`** subheadings — parallel UI options (replaces GitBook's `{% tabs %}`)
 - **Tables** for plan limits and troubleshooting
-- **`<details><summary>`** for FAQ entries (collapsible)
-- **Footer** — every page ends with the standard `Agent Instructions: Querying This Documentation` block (matches the rest of EtherDrops GitBook)
+- **`<details><summary>`** for FAQ entries (collapsible, native HTML)
+- **Footer** — every page ends with the standard `Agent Instructions: Querying This Documentation` block matching the official mirror
 
 ## 🧱 Source of truth for facts
 

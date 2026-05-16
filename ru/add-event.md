@@ -4,30 +4,22 @@
 
 Добавление Polymarket-события говорит боту следить за **одним конкретным рынком** и уведомлять о значимых событиях — сдвигах цен, крупных сделках, всплесках объёма. Это самый прямой способ следить за рынками, которые вам уже интересны.
 
-{% hint style="info" %}
-**Две эквивалентные точки входа.** Можно либо переслать ссылку на событие в чат бота, либо пройти через `Main Menu → Tracking → Polymarket Events → ➕ Add Event`. В обоих случаях вы окажетесь в одном месте.
-{% endhint %}
+> [!NOTE]
+> **Две эквивалентные точки входа.** Можно либо переслать ссылку на событие в чат бота, либо пройти через `Main Menu → Tracking → Polymarket Events → ➕ Add Event`. В обоих случаях вы окажетесь в одном месте.
 
 ## 🪜 Пошаговый гайд
 
-{% stepper %}
-
-{% step %}
-### Выберите рынок
+### 1. Выберите рынок
 
 Откройте на Polymarket событие, за которым хотите следить. Подойдёт бинарный рынок, мультиэйт-рынок или производный — главное, чтобы URL указывал на одно событие.
 
 ![Страница мультиисходного события Polymarket в браузере](../../../media/screenshots/polymarket/event-page.png)
-{% endstep %}
 
-{% step %}
-### Скопируйте ссылку
+### 2. Скопируйте ссылку
 
 Скопируйте полный URL из адресной строки. На мобильном работает «Copy Link» из системного share-меню.
-{% endstep %}
 
-{% step %}
-### Отправьте ссылку в Drops Bot
+### 3. Отправьте ссылку в Drops Bot
 
 Откройте чат с Drops Bot в Telegram и вставьте ссылку. Бот распознаёт домен Polymarket и пришлёт **экран выбора оддсов**:
 
@@ -39,20 +31,15 @@
 * Если у события больше 10 исходов — появляется строка пагинации: `⏪ ⬅️ 1 ➡️ ⏩` (по 10 оддсов на страницу)
 
 <!-- screenshot: превью события от бота -->
-{% endstep %}
 
-{% step %}
-### Подтвердите
+### 4. Подтвердите
 
 Выберите отдельные исходы тапом по строке либо нажмите **Select All Yes** / **Select All No**, чтобы трекать все исходы сразу. Выбранные оддсы помечаются ✅. **Back** — отменить выбор.
 
-{% hint style="success" %}
-**Трекинг активен.** Алерты начинают приходить сразу, исходя из ваших текущих [настроек](./alerts-and-filters.md). Дефолтные пороги консервативные — при желании можно сделать чувствительнее.
-{% endhint %}
-{% endstep %}
+> [!TIP]
+> **Трекинг активен.** Алерты начинают приходить сразу, исходя из ваших текущих [настроек](./alerts-and-filters.md). Дефолтные пороги консервативные — при желании можно сделать чувствительнее.
 
-{% step %}
-### (Опционально) Настройки по событию
+### 5. (Опционально) Настройки по событию
 
 Откройте событие через `Polymarket Events → Edit` и настройте:
 
@@ -62,9 +49,6 @@
 <!-- VERIFY: точные названия настроек по событию -->
 
 Полный справочник параметров — в [Настройке алертов Polymarket](./alerts-and-filters.md).
-{% endstep %}
-
-{% endstepper %}
 
 ## 📦 Массовое добавление
 
@@ -130,6 +114,15 @@ https://polymarket.com/event/<event-slug>?<query-params>
 
 # Agent Instructions: Querying This Documentation
 
-If you need additional information that is not directly available on this page, you can query the documentation dynamically by asking a question.
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
 
-Perform an HTTP GET request on this page's URL with the `ask` query parameter set to your question (URL-encoded). The response will contain context tailored to your query, drawn from the full EtherDrops Bot documentation.
+Perform an HTTP GET request on the current page URL with the `ask` query parameter:
+
+```
+GET https://etherdrops.gitbook.io/etherdrops-bot/<page-path>.md?ask=<question>
+```
+
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

@@ -2,11 +2,10 @@
 
 ## 📊 Real-Time Prediction Market Monitoring
 
-EtherDrops Bot delivers **instant, real-time alerts** for Polymarket prediction market activity on the **Polygon network** — straight to your Telegram. Whether you are tracking a single event or watching whale wallets that bet on Polymarket, the bot keeps you in the loop without you ever leaving the chat.
+Drops Bot delivers **instant, real-time alerts** for Polymarket prediction market activity on the **Polygon network** — straight to your Telegram. Whether you are tracking a single event or watching whale wallets that bet on Polymarket, the bot keeps you in the loop without you ever leaving the chat.
 
-{% hint style="info" %}
-Polymarket Event Tracking launched on **March 10, 2026** and is available across all subscription plans. Limits scale with your plan tier — see [Plan Limits](./plan-limits.md).
-{% endhint %}
+> [!NOTE]
+> Polymarket Event Tracking launched on **March 10, 2026** and is available across all subscription plans. Limits scale with your plan tier — see [Plan Limits](./plan-limits.md).
 
 <!-- screenshot: Polymarket section in the bot's Tracking menu -->
 
@@ -23,9 +22,8 @@ The two modes complement each other: track a few hot markets directly, and let w
 
 Polymarket Events on Drops Bot operate exclusively on **Polygon**.
 
-{% hint style="warning" %}
-**Polygon only.** Polymarket runs on Polygon PoS, and all tracking happens there. Wallet activity on Ethereum, Base, Solana, or any other network will **not** produce Polymarket alerts — even if the same wallet also trades on Polymarket.
-{% endhint %}
+> [!WARNING]
+> **Polygon only.** Polymarket runs on Polygon PoS, and all tracking happens there. Wallet activity on Ethereum, Base, Solana, or any other network will **not** produce Polymarket alerts — even if the same wallet also trades on Polymarket.
 
 ## 💼 Use Cases
 
@@ -78,6 +76,15 @@ Type **`/polymarket`** to open your watchlist directly. You can also reach it vi
 
 # Agent Instructions: Querying This Documentation
 
-If you need additional information that is not directly available on this page, you can query the documentation dynamically by asking a question.
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
 
-Perform an HTTP GET request on this page's URL with the `ask` query parameter set to your question (URL-encoded). The response will contain context tailored to your query, drawn from the full EtherDrops Bot documentation.
+Perform an HTTP GET request on the current page URL with the `ask` query parameter:
+
+```
+GET https://etherdrops.gitbook.io/etherdrops-bot/<page-path>.md?ask=<question>
+```
+
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

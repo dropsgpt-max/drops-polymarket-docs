@@ -4,9 +4,8 @@
 
 While [Add Polymarket Event](./add-event.md) watches **one market regardless of who trades on it**, Wallet Polymarket Activity does the opposite — it watches **one wallet across every Polymarket market it touches**. Combine the two and you cover both ends of the firehose.
 
-{% hint style="info" %}
-Wallet Polymarket Activity is a **per-wallet toggle** inside the existing wallet tracking flow. You don't add wallets separately — you enable Polymarket as an event type on wallets you're already watching.
-{% endhint %}
+> [!NOTE]
+> Wallet Polymarket Activity is a **per-wallet toggle** inside the existing wallet tracking flow. You don't add wallets separately — you enable Polymarket as an event type on wallets you're already watching.
 
 ## 🎯 How It Works
 
@@ -22,43 +21,29 @@ This mirrors the same `Filters → Events` pattern used by liquidations, swaps, 
 
 ## 🪜 Enable Polymarket on a Watched Wallet
 
-{% stepper %}
-
-{% step %}
-### Open your wallet list
+### 1. Open your wallet list
 
 `Main Menu → Tracking → Wallets`, then tap the wallet you want to configure (or `/edit` if you prefer commands).
 
 <!-- screenshot: wallet list view -->
-{% endstep %}
 
-{% step %}
-### Open Filters → Events
+### 2. Open Filters → Events
 
 Tap **Filters**, then **Events**. You'll see a list of event types: Transfers, Swaps, NFT Transfers, Approvals, Polymarket, and others.
-{% endstep %}
 
-{% step %}
-### Toggle Polymarket on
+### 3. Toggle Polymarket on
 
 Switch the **Polymarket** toggle to ON.
 
-{% hint style="info" %}
-**Default state.** Since the April 9, 2026 release, the Polymarket toggle defaults to **enabled** for newly added wallets. <!-- VERIFY: confirm default state -->
-{% endhint %}
-{% endstep %}
+> [!NOTE]
+> **Default state.** Since the April 9, 2026 release, the Polymarket toggle defaults to **enabled** for newly added wallets. <!-- VERIFY: confirm default state -->
 
-{% step %}
-### Save and exit
+### 4. Save and exit
 
 Confirm changes. The wallet's next Polymarket trade on Polygon will produce a Telegram alert.
 
-{% hint style="success" %}
-**Tracking active.** No further setup needed. The wallet will now emit Polymarket-flavoured alerts in addition to whatever else you have enabled.
-{% endhint %}
-{% endstep %}
-
-{% endstepper %}
+> [!TIP]
+> **Tracking active.** No further setup needed. The wallet will now emit Polymarket-flavoured alerts in addition to whatever else you have enabled.
 
 ## 📨 What Alerts Look Like
 
@@ -122,6 +107,15 @@ Bulk-added wallets inherit the same default filter state, including Polymarket. 
 
 # Agent Instructions: Querying This Documentation
 
-If you need additional information that is not directly available on this page, you can query the documentation dynamically by asking a question.
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
 
-Perform an HTTP GET request on this page's URL with the `ask` query parameter set to your question (URL-encoded). The response will contain context tailored to your query, drawn from the full EtherDrops Bot documentation.
+Perform an HTTP GET request on the current page URL with the `ask` query parameter:
+
+```
+GET https://etherdrops.gitbook.io/etherdrops-bot/<page-path>.md?ask=<question>
+```
+
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.
