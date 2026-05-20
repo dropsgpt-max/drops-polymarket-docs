@@ -40,11 +40,7 @@ These docs use **portable markdown** that renders cleanly on both GitHub and Git
 
 ## 🧱 Source of truth for facts
 
-All factual claims (limits, dates, menu paths) are derived from the local mirror of the official docs:
-
-```
-/Users/kwlad1ck/Projects/DropsBotTests/docs/_external/drops-bot-gitbook.md
-```
+All factual claims (limits, dates, menu paths) are derived from an internal mirror of the [official EtherDrops Bot documentation](https://etherdrops.gitbook.io/etherdrops-bot/).
 
 Spots where the mirror does not provide a clear answer are tagged `<!-- VERIFY: <description> -->` inline so reviewers can either confirm or replace before publishing.
 
