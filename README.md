@@ -1,49 +1,141 @@
-# Polymarket — Documentation Section
+---
+description: >-
+  Drops Bot is a multifunctional Telegram-based tool designed for real-time
+  monitoring of blockchain activities across multiple networks. It caters to
+  traders, NFT collectors, and DeFi enthusiasts
+cover: .gitbook/assets/Banner.jpg
+coverY: 0
+---
 
-This folder contains the **foundational documentation** for the Polymarket tracking feature of [Drops Bot](https://etherdrops.gitbook.io/etherdrops-bot/), written in the same GitBook-friendly style as the rest of the public docs and enhanced with FAQ + troubleshooting patterns from [docs.onfomo.com](https://docs.onfomo.com/).
+# 🌍 Introduction
 
-> **Status:** drafts ready for review and screenshot insertion. Items marked `<!-- VERIFY -->` require confirmation against the live bot UI before publishing.
+<details>
 
-## 🌍 Languages
+<summary>Drops Bot supports a wide range of networks:</summary>
 
-| | Path |
-|---|---|
-| 🇬🇧 English | [`./en/`](./en/) |
-| 🇷🇺 Русский | [`./ru/`](./ru/) |
+* Ethereum
+* Binance Smart Chain (BSC)
+* Polygon
+* Arbitrum
+* Avalanche
+* Optimism
+* zkSync
+* Base
+* Solana
+* TON
+* Pulse
+* opBNB
+* Blast
+* Linea
+* Mantle
+* Scroll
+* Tron
+* Sui
+* Sonic
+* Unichain
+* HyperEVM
+* HyperLIQUID
+* Abstract
+* Ink
+* Berachain
+* Plasma
+* StoryChain
+* Bitcoin
+* Monad
+* MegaETH
 
-## 📑 Pages
+</details>
 
-| # | Page (EN) | Page (RU) | Purpose |
-|---|---|---|---|
-| 1 | [polymarket.md](./en/polymarket.md) | [polymarket.md](./ru/polymarket.md) | Overview / hub page |
-| 2 | [quickstart.md](./en/quickstart.md) | [quickstart.md](./ru/quickstart.md) | First event in 60 seconds |
-| 3 | [add-event.md](./en/add-event.md) | [add-event.md](./ru/add-event.md) | Full how-to for event link tracking |
-| 4 | [wallet-activity.md](./en/wallet-activity.md) | [wallet-activity.md](./ru/wallet-activity.md) | Polymarket activity on watched wallets |
-| 5 | [event-management.md](./en/event-management.md) | [event-management.md](./ru/event-management.md) | View / edit / remove tracked events |
-| 6 | [alerts-and-filters.md](./en/alerts-and-filters.md) | [alerts-and-filters.md](./ru/alerts-and-filters.md) | Notification tuning & filters |
-| 7 | [plan-limits.md](./en/plan-limits.md) | [plan-limits.md](./ru/plan-limits.md) | Plan tiers & event limits |
-| 8 | [faq-and-troubleshooting.md](./en/faq-and-troubleshooting.md) | [faq-and-troubleshooting.md](./ru/faq-and-troubleshooting.md) | FAQ + problem/cause/fix table |
-| 9 | [changelog.md](./en/changelog.md) | [changelog.md](./ru/changelog.md) | Polymarket-specific release log |
+## 🧠 Core Features
 
-## 🎨 Style conventions
+### 🔔 Real-Time Alerts
 
-These docs use **portable markdown** that renders cleanly on both GitHub and GitBook:
+Get instant notifications for on-chain and trading events:
 
-- **`# H1`** — one per page, no emoji
-- **`## H2`** — section headings, emoji prefix for visual scanning (📊 🔍 🌐 💼 🚀 ❓ 🔧)
-- **`> [!NOTE]` / `> [!WARNING]` / `> [!TIP]`** — GitHub-flavored callouts (also render as plain blockquotes on GitBook)
-- **`### N. Step title`** — numbered walkthroughs (replaces GitBook's `{% stepper %}`)
-- **`**Tab title**`** subheadings — parallel UI options (replaces GitBook's `{% tabs %}`)
-- **Tables** for plan limits and troubleshooting
-- **`<details><summary>`** for FAQ entries (collapsible, native HTML)
-- **Footer** — every page ends with the standard `Agent Instructions: Querying This Documentation` block matching the official mirror
+* Token price changes and DEX swaps
+* Wallet activity and balance updates
+* NFT floor price movements and sales
+* Gas price alerts
+* Token unlocks and funding rate changes
+* Perpetual & Spot trade alerts on **Hyperliquid L1**: entry, exit, liquidation, and live Tx hash previews via **HypurrScan**
 
-## 🧱 Source of truth for facts
+***
 
-All factual claims (limits, dates, menu paths) are derived from an internal mirror of the [official EtherDrops Bot documentation](https://etherdrops.gitbook.io/etherdrops-bot/).
+### ⚙️ Flexible Tracking
 
-Spots where the mirror does not provide a clear answer are tagged `<!-- VERIFY: <description> -->` inline so reviewers can either confirm or replace before publishing.
+Customize alerts using filters and limits across:
 
-## 🖼️ Screenshots
+* Polymarket
+* Coins
+* Wallets
+* NFTs
 
-Screenshot placeholders look like `<!-- screenshot: short description -->`. Drop matching images into `media/screenshots/polymarket/` and replace each placeholder with the markdown image reference at publish time.
+***
+
+### 💸 Solana Trading & Limit Orders
+
+Drops Bot includes an integrated trading module for Solana wallets with full support for **market and limit orders**.
+
+**Trading Modes**\
+Both **Buy** and **Sell** menus include a toggle to switch between:
+
+* **Market** (instant execution)
+* **Limit** (execution at specified price)
+
+**Limit Orders Management**
+
+* Accessible via the **Main Menu**
+* Shows all open **Buy/Sell orders**
+* Includes price, volume, time validity, and cancel actions
+
+***
+
+### 🎟️ Referral Program & Caller Mode
+
+**Monetize your network and activity — earn in multiple ways:**
+
+* **30% of all subscription payments** made by your referrals
+* **Up to 30% of trading fees** from their regular activity
+* **10% discount** for your invited users (on both subscriptions and trading fees)
+
+> 💡 **Caller Mode**: Boost your earnings to the next level.
+
+Enable **Caller Mode** to embed your referral link directly into Solana alerts inside Telegram groups.\
+When users click your **Caller Link** and trade, you earn **40% of the trading fee** — even if they already had another referrer.\
+Caller Mode is designed for power users, communities, and caller groups.
+
+All referral tools, tracking, and Caller Link generation are accessible via the **Referrals** section in the bot.
+
+***
+
+### 📣 Groups & Channels Integration
+
+Use **Profiles** to route alerts to specific destinations:
+
+* **Main Profile** for default private or group alerts
+* **Custom Profiles** for organizing by topic, group, or channel
+
+One Drops Bot per group or channel. Multiple Profiles allowed per instance.
+
+Caller Mode works seamlessly within group alerts when the bot is added and Caller Mode is enabled.
+
+***
+
+### 📕 Purpose-Built for Onchain Precision
+
+In this documentation, you’ll find:
+
+* A full breakdown of Drops Bot’s architecture and capabilities
+* Methods to configure precise alerting and filtering logic
+* Tools to streamline portfolio monitoring and signal delivery
+* Integrated Solana trading, including limit order execution
+* Scalable solutions for both personal use and public distribution
+
+> Explore full guides on [**Referrals**](advanced-tools/referrals.md) and [**Caller Mode**](advanced-tools/caller-mode.md) to start earning today.
+
+{% hint style="info" %}
+Drops Bot is an essential tool for anyone who wants to stay updated on the latest on-chain activity — and now, to earn from it. You can find more details, FAQs, and subscription plans on the [DropsTab](https://dropstab.com/products/drops-bot) page.
+
+If you have questions, feedback, or suggestions — reach out in our community [Telegram chat](https://t.me/dropstab_EN).
+{% endhint %}
+
