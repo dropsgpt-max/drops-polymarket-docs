@@ -1,3 +1,25 @@
+---
+hidden: true
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # 🟦 Polymarket
 
 Drops Bot lets you track any Polymarket event and whale wallets in real time. Get instant Telegram alerts on price movements, odds changes, volume, and smart-money bets.

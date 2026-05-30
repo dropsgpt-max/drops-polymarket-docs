@@ -34,6 +34,7 @@
 * [💹 Funding Alerts](core-features/funding-alerts.md)
 * [💊 Pump.Fun](core-features/pump.fun.md)
 * [🟦 Polymarket](core-features/polymarket.md)
+* [🔷 Polymarket](core-features/polymarket-1.md)
 * [💳 Subscriptions](core-features/subscriptions.md)
 * [⚙️ Settings](core-features/settings.md)
 * [💸 Trading (Russian)](core-features/trading-russian/README.md)
