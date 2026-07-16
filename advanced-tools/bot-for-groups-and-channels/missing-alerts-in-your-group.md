@@ -59,13 +59,13 @@ Open your group, tap on three-dot menu and choose "**Manage group**"
 {% step %}
 Go to "**Members**" and tap on "**Add members**"
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (23).png" alt="" width="563"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (24).png" alt="" width="563"><figcaption></figcaption></figure></div>
 {% endstep %}
 
 {% step %}
 Add each bot account from the list
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (21).png" alt="" width="375"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (25).png" alt="" width="375"><figcaption></figcaption></figure></div>
 {% endstep %}
 
 {% step %}
