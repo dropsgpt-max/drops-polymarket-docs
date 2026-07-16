@@ -1,3 +1,24 @@
+---
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # 💊 Pump.Fun
 
 **💊 Pump.Fun Alert** is a feature designed to track **fair-launched** tokens on the **Solana** network — tokens that are deployed without prior announcements. It helps you stay informed about new launches, increasing trading activity, and listings on platforms like **Raydium**.

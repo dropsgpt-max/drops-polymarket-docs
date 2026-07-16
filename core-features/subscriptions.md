@@ -1,3 +1,24 @@
+---
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # 💳 Subscriptions
 
 Drops Bot offers several subscription plans to expand your tracking limits and unlock advanced features. You can subscribe via the **website** or using **Telegram Stars** inside the bot.

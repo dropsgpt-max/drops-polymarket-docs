@@ -1,3 +1,24 @@
+---
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # ⛽ Gas Alerts
 
 **Gas Alert** is a feature that allows you to receive real-time notifications when Ethereum gas prices reach a value you define. It’s perfect for anyone who wants to save on fees or time transactions efficiently — whether you're minting NFTs, making DeFi moves, or simply waiting for the right moment to act.

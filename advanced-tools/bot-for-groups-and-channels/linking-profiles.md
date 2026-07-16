@@ -1,3 +1,24 @@
+---
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # 🔗 Linking Profiles
 
 The **Profile connection system** in Drops Bot allows you to choose **which alerts go to which group or topic**. It may sound a little technical at first, but we’ll walk you through every detail — **no confusion, no guesswork**.

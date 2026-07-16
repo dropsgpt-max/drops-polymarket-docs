@@ -1,3 +1,24 @@
+---
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # ⚙️ Settings
 
 The **⚙️ Settings** section in Drops Bot allows you to customize how the bot works, filter unwanted activity, manage alerts, set language preferences, and control your account-level features — all from one place.

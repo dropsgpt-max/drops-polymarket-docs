@@ -1,3 +1,24 @@
+---
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # 📩 Common Issues
 
 If you don't find a solution to your specific problem here or require immediate assistance, we recommend reaching out to our dedicated support team directly via Telegram: [**@drops\_support**](https://t.me/edrops_support)

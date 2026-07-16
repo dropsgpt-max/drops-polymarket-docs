@@ -1,3 +1,24 @@
+---
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # 👤 Bot for Groups and Channels
 
 The **Profiles** feature in Drops Bot is designed to give you full control over **what notifications you receive and where they are sent** — whether it’s to your **private chat**, a **Telegram group**, or a **channel**.

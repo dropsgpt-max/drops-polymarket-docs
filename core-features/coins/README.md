@@ -2,6 +2,24 @@
 description: >-
   Drops Bot helps you track token prices, major swaps, and funding rates — from
   both DEX and CEX — in real time, straight to your Telegram.
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # 🪙 Coins

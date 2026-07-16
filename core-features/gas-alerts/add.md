@@ -2,6 +2,24 @@
 description: >-
   Perfect for timing NFT mints, DeFi transactions, or any operation sensitive to
   network fees.
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # ➕ Add

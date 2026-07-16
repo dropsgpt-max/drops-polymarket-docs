@@ -2,6 +2,24 @@
 description: >-
   Drops Bot transforms your Telegram into a powerful hub for on-chain
   transaction monitoring.
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # 👛 Wallets
