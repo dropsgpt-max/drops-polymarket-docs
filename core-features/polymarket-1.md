@@ -116,13 +116,13 @@ Settings apply to the specific tracked event or odd you edit.
 
 Your Polymarket tracking capacity depends on your active subscription.
 
-| Plan              | Wallets/Events | Messages per hour | Swap alert |
-| ----------------- | -------------- | ----------------- | ---------- |
-| **Free/Basic**    | 20             | 100               | ≥$1000     |
-| **Advanced**      | 100            | 500               | >$0        |
-| **Pro**           | 500            | 1000              | >$0        |
-| **Wallet Sniper** | 2000           | 2000              | >$0        |
-| **Custom**        | Custom         | Custom            | >$0        |
+| Plan              | Wallets | Events | Messages per hour | Swap alert |
+| ----------------- | ------- | ------ | ----------------- | ---------- |
+| **Free/Basic**    | 20      | 20     | 100               | ≥$1000     |
+| **Advanced**      | 100     | 100    | 500               | >$0        |
+| **Pro**           | 500     | 500    | 1000              | >$0        |
+| **Wallet Sniper** | 2000    | 500    | 2000              | >$0        |
+| **Custom**        | Custom  | Custom | Custom            | >$0        |
 
 #### What happens when you reach a limit
 

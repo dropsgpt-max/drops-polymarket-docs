@@ -35,7 +35,7 @@ Drops Bot is not an execution bot. It is an intelligence and discovery engine th
 
 ### How to Open the Polymarket Menu
 
-**Open the Main Menu** and tap on **“**&#xD83D;� **Polymarket”** or type the command: `/polymarket`
+**Open the Main Menu** and tap on **“**&#x1F7E6; **Polymarket”** or type the command: `/polymarket`
 
 If you’re not tracking anything yet, you’ll see:
 

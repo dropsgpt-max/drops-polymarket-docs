@@ -19,122 +19,212 @@ layout:
     visible: true
 ---
 
-# 👤 Bot for Groups and Channels
+# 👤 Bot for Groups, Channels, and Topics
 
-The **Profiles** feature in Drops Bot is designed to give you full control over **what notifications you receive and where they are sent** — whether it’s to your **private chat**, a **Telegram group**, or a **channel**.
+Profiles let you keep separate tracking setups and send different alerts to Telegram groups, channels, or topics.
 
-It’s especially useful for **influencers**, **community admins**, and active users who want their audience to receive real-time alerts about **wallet activity**, **whale movements**, **liquidity changes**, **token listings**, and other key crypto events.
+`Main` is created automatically and is used for private alerts. When you connect `Main` to a group or channel, all alerts you receive privately are also mirrored to that destination. You can add Custom Profiles for different audiences or strategies. Each Profile has its own tracking settings and can broadcast to one or more destinations.
 
-{% hint style="warning" %}
-Only **one Drops Bot instance** can be added to a group or channel
+### Profiles at a glance
+
+The Profile list keeps the important information visible.
+
+<div align="center"><figure><img src="https://2854945133-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FE1xatl7EJgINFUiyMW2P%2Fuploads%2F3IO1Z0ENDAvrlnXSgbN8%2Fprofiles-list-light-framed.png?alt=media" alt="Drops Bot Profile list showing Main and Custom Profiles with edit, delete, tracking, and Broadcast controls" width="375"><figcaption><p>Profile list with tracking counters and Broadcast destinations.</p></figcaption></figure></div>
+
+<details>
+
+<summary>How to read the Profile list</summary>
+
+* Tap `✏️` next to a Profile name to open **Edit Profile**.
+* Tap `🗑️` next to a Custom Profile to delete it. `Main` cannot be deleted, so it has no trash icon.
+* One active destination appears as `Broadcast: <Group name>`.
+* Multiple active destinations appear as `Broadcast: <N> Groups`.
+
+</details>
+
+### Create a Profile
+
+{% stepper %}
+{% step %}
+Open Drops Bot in a private chat.
+{% endstep %}
+
+{% step %}
+Go to **Main Menu** → **Tracking** → **My Profiles**.
+{% endstep %}
+
+{% step %}
+Tap **➕ Add Profile**.
+{% endstep %}
+
+{% step %}
+Enter a name for the new Profile.
+{% endstep %}
+{% endstepper %}
+
+{% hint style="success" %}
+Your new Profile is ready. Open it with `✏️` to configure what it tracks and where it broadcasts.
 {% endhint %}
 
-***
+### Edit or rename a Profile
 
-### 🔍 What Is Drops Bot for Groups & Channels?
+{% stepper %}
+{% step %}
+Go to **Main Menu** → **Tracking** → **My Profiles**.
+{% endstep %}
 
-If you:
+{% step %}
+Tap `✏️` next to the Profile name.
 
-* Manage a crypto group or niche Telegram community
-* Want to automatically broadcast important on-chain events
-* Or need to separate personal notifications from public ones
+<div align="left"><figure><img src="https://2854945133-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FE1xatl7EJgINFUiyMW2P%2Fuploads%2Fufcjtsn1vhTcrppfI1EY%2Fedit-profile-light-framed.png?alt=media" alt="Edit Profile menu with Predictions, Coins, Wallets, NFTs, Gas Price, Funding, Duplicate, Rename, Broadcast, and Delete controls" width="375"><figcaption><p>Edit Profile settings and management controls.</p></figcaption></figure></div>
+{% endstep %}
 
-You can **add Drops Bot to a group or channel**, apply filters, and let it handle smart, real-time alerts.
+{% step %}
+Choose the action you need:
 
-💡 All configuration is done from a **single interface**, whether it's for personal use or public broadcasting.
+* To update tracking settings, tap **Predictions**, **Coins**, **Wallets**, **NFTs**, **Gas Price**, **Funding**, or another available option.
+* To change the Profile name, tap **✏️ Rename** and enter the new name.
+* To remove a Custom Profile, tap **🗑️ Delete** and confirm the deletion. This removes the Profile settings and stops its broadcasts, but Drops Bot stays in the connected Telegram groups. The `Main` Profile cannot be deleted.
+{% endstep %}
+{% endstepper %}
 
-***
+The settings are independent for every Profile. Changes made in one Profile do not affect the others.
 
-### 👤 What Are Profiles?
+{% hint style="info" %}
+A Profile can send alerts to one or more connected groups, channels, or topics.
+{% endhint %}
 
-A **Profile** is a bundle of settings that defines:
+### How to Add the Bot to a Group
 
-* **What to track** — coins, swaps, NFTs, wallets, pools, etc.
-* **Where to send alerts** — personal chat, group, or channel
+{% stepper %}
+{% step %}
+Open Drops Bot in a private chat and go to **Main Menu** → **Tracking** → **My Profiles**.
+{% endstep %}
 
-Think of each Profile as a **dedicated alert stream** linked to a specific destination.
+{% step %}
+Tap **📣 Add Bot to Group**.
+{% endstep %}
 
-***
+{% step %}
+Choose the Profile that will send notifications.
 
-### 🧩 Types of Profiles
+If you have only one Profile, Drops Bot skips this screen. If you have more than one, the **Select bot profile to send notifications** screen appears. It shows up to 10 Profiles per page; use the pagination buttons to browse the rest.
 
-<details>
+<div align="left"><figure><img src="https://2854945133-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FE1xatl7EJgINFUiyMW2P%2Fuploads%2FdCwrSqKZgrLsHq2FNel1%2Fselect-profile-light-framed.png?alt=media" alt="Select bot profile to send notifications screen with ten Profiles and pagination controls" width="375"><figcaption><p>Select a Profile before adding Drops Bot to a group or channel.</p></figcaption></figure></div>
+{% endstep %}
 
-<summary><strong>Main Profile (Default)</strong></summary>
+{% step %}
+Select the Telegram group and add Drops Bot as an administrator.
+{% endstep %}
 
-* Created automatically
-* Used by default for **private notifications**
-*   **Can be linked** to a group or channel
+{% step %}
+Alerts from the selected Profile start broadcasting to the main chat. In a forum group, this is the **General** topic by default.
+{% endstep %}
+{% endstepper %}
 
-    > If linked, all alerts you receive privately will also be **mirrored** to the group/channel
+{% hint style="success" %}
+Drops Bot is connected and ready to broadcast alerts from the selected Profile.
+{% endhint %}
 
-📌 Ideal if you want to receive the **same alerts in both your private chat and your group**
+{% hint style="warning" %}
+Only the user who added Drops Bot can manage the group's Profiles. Other users cannot connect their Profiles to this bot instance. Change the selected Profile inside Drops Bot in a private chat, not with a Profile-name command in the group.
+{% endhint %}
 
-</details>
+{% hint style="info" %}
+One active Drops Bot instance manages Profiles and Broadcast settings for each group or channel. In groups, additional backup instances can be added to distribute alert delivery; they synchronize automatically with the active instance.
+{% endhint %}
 
-<details>
+### How to Add the Bot to a Channel
 
-<summary><strong>Custom Profiles</strong></summary>
+Telegram uses a different admin flow for channels.
 
-* You can create **multiple Profiles** for different purposes
-* Each Profile can be linked to:
-  * A **separate group**
-  * A **channel**
-  * Or even a **specific topic** inside a group (Telegram topics are supported)
+{% stepper %}
+{% step %}
+Open Drops Bot in a private chat and go to **Main Menu** → **Tracking** → **My Profiles**.
+{% endstep %}
 
-</details>
+{% step %}
+Tap **📣 Add Bot to Group** and select the Profile that will send notifications.
+{% endstep %}
 
-<div align="left"><figure><img src="../../.gitbook/assets/ProfileList.png" alt="" width="375"><figcaption></figcaption></figure></div>
+{% step %}
+Open the channel settings and tap **Subscribers**.
+{% endstep %}
 
-📌 Example setup:
+{% step %}
+Select Drops Bot, tap **Make Admin**, then tap **Done**.
+{% endstep %}
+{% endstepper %}
 
-* **Profile 1** – sends Ethereum whale wallet activity to _Topic A_
-* **Profile 2** – sends DEX swap alerts to _Topic B_
-* **Profile 3** – monitors NFT mints in a _separate group_
+{% hint style="success" %}
+Drops Bot can now post alerts from the selected Profile to the channel.
+{% endhint %}
 
-***
+### Broadcast to a Telegram topic
 
-### 🔁 Can I Use Drops Bot for Both Private and Group Notifications?
+First add Drops Bot to the forum group using the flow above.
 
-**Yes!** You can:
+{% stepper %}
+{% step %}
+In a private chat with Drops Bot, select the Profile that should broadcast to the topic.
+{% endstep %}
 
-* Get **personal alerts** via the Main Profile
-* And manage **group or channel alerts** at the same time
+{% step %}
+Open the topic that should receive alerts from this Profile.
+{% endstep %}
 
-All from **one centralized interface**, no need to switch bots.
+{% step %}
+As a group administrator, send:
 
-***
+```
+/usetopic
+```
+{% endstep %}
 
-### 💬 Short Commands for Groups/Channel
+{% step %}
+To assign another Profile to another topic, return to the private chat and switch to that Profile. Then open the other topic and send `/usetopic` again.
+{% endstep %}
+{% endstepper %}
 
-Once Drops Bot is added to a group/channel, admins can use these slash commands:
+{% hint style="info" %}
+`/usetopic` is for administrators only and applies the currently selected Profile to the topic where the command is sent. Do not add a Profile name to the command.
+{% endhint %}
 
-1. **Search a coin**\
-   `/name`, `/ticker`, or `/contract` — Shows real-time data like price, % change, etc.
-2. **Help**\
-   `/help` — Displays general bot usage guide
-3. **Coin Watchlist**\
-   `/coins` — Shows coins being tracked and their price movements
-4. **NFT Collections**\
-   `/nft` — Lists tracked NFT collections and floor price changes
-5. **Funding Rates**\
-   `/funding` — Shows Binance Futures funding rates
-6. **Gas Price**\
-   `/gas` — Displays current Ethereum gas prices
-7. **GMX Positions**\
-   `/gmx_positions` — Shows open GMX derivatives or margin positions
+### Manage Profile broadcasts
 
-***
+The button in **Edit Profile** changes with the current state:
 
-### 🧭 Summary
+* `Broadcast: <Group name>` — the Profile broadcasts to one group.
+* `Broadcast: <N> Groups` — the Profile broadcasts to multiple groups.
+* `Broadcast: 0 Groups` — Drops Bot is present in one or more groups, but this Profile is not broadcasting to any of them. Follow Missing alerts in your group? to enable a destination and check alert delivery.
+* `📣 Add Bot to Group` — Drops Bot has not been added to any group yet.
 
-* **Profiles** manage what to track and where to send alerts
-* **Main Profile** is your default and supports both private and group usage
-* **Custom Profiles** help separate alerts by topic, group or channel
-* You can use Drops Bot **simultaneously** for private and public alerts
-* All configuration is done from **one control panel**
-* Only **one Drops Bot** per group/channel — but with **many Profiles** inside
+{% stepper %}
+{% step %}
+Go to **Main Menu** → **Tracking** → **My Profiles**, then tap `✏️` next to the Profile.
+{% endstep %}
 
-***
+{% step %}
+Tap **Broadcast** in the **Edit Profile** menu.
+{% endstep %}
 
-The **Profiles system** makes Drops Bot an ideal solution for anyone who wants to receive the **right signals at the right time**, without clutter or confusion.
+{% step %}
+The Broadcast screen lists all available groups.
+
+Tap the current `On` or `Off` state next to a group to switch broadcasting for that destination. The message updates immediately.
+
+<div align="left"><figure><img src="https://2854945133-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FE1xatl7EJgINFUiyMW2P%2Fuploads%2FipcfNSQHaQ0i7tHDeZGM%2Fbroadcast-light-framed.png?alt=media" alt="Broadcast management screen showing groups with On and Off states, individual delete controls, Add to New Group, and Remove All Groups" width="375"><figcaption><p>Manage where the selected Profile broadcasts alerts.</p></figcaption></figure></div>
+{% endstep %}
+
+{% step %}
+Tap `🗑️` next to a group to remove it from this Profile's broadcast list, or tap **Remove All Groups** to clear the entire list.
+{% endstep %}
+
+{% step %}
+Review the confirmation and tap **✅ Confirm**. Tap **❌ Cancel** to keep the current broadcast list.
+{% endstep %}
+{% endstepper %}
+
+{% hint style="warning" %}
+Removing a group from the broadcast list stops alerts from this Profile. It does not remove Drops Bot from the Telegram group.
+{% endhint %}

@@ -61,7 +61,7 @@ Caller Mode unlocks **exceptional commissions** from trading activity:
   In such cases, the **original referrer is bypassed**, and **you receive the full commission**.
 
 {% hint style="info" %}
-Users referred via Caller Mode do **not receive trading discounts**. The **10% discount** applies only to users you **invite directly** via your [referral link](referrals.md) or code.
+Users referred via Caller Mode do **not receive trading discounts**. The **10% discount** applies only to users you **invite directly** via your referral link or code.
 {% endhint %}
 
 ***
@@ -79,7 +79,7 @@ Caller Mode settings are available in the bot’s main **Settings** section.
 This section includes:
 
 * A link to the **`Buy` Trading section** of a specific token
-* A direct link to [**add the bot to a group**](bot-for-groups-and-channels/linking-profiles.md#step-1-add-the-bot-to-the-group-first)
+* A direct link to [**add the bot to a group**](bot-for-groups-and-channels/#how-to-add-the-bot-to-a-group)
 
 ***
 

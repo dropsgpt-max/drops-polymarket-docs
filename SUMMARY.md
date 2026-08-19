@@ -56,9 +56,7 @@
 
 ## 🛠️ Advanced / Tools
 
-* [👤 Bot for Groups and Channels](advanced-tools/bot-for-groups-and-channels/README.md)
-  * [➕ Create & Manage Profiles](advanced-tools/bot-for-groups-and-channels/create-and-manage-profiles.md)
-  * [🔗 Linking Profiles](advanced-tools/bot-for-groups-and-channels/linking-profiles.md)
+* [👤 Bot for Groups, Channels, and Topics](advanced-tools/bot-for-groups-and-channels/README.md)
   * [🔊 Missing alerts in your group?](advanced-tools/bot-for-groups-and-channels/missing-alerts-in-your-group.md)
 * [☎️ Caller Mode](advanced-tools/caller-mode.md)
 * [🎟️ Referrals](advanced-tools/referrals.md)

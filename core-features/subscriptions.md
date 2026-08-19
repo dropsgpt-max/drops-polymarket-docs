@@ -33,10 +33,31 @@ Drops Bot offers several subscription plans to expand your tracking limits and u
 {% step %}
 Activate any bot from the list:
 
-* `t.me/EtherDrops_bot`
-* `t.me/EtherDrops1_bot` to `t.me/EtherDrops9_bot`
-* **Premium Bots**:\
-  `@EtherDrops_Premiumbot`, `@Drops_Premiumbot`, `@Drops_Premium1bot`, `@Drops_Premium2bot`, `@Drops_Premium3bot`
+<details>
+
+<summary>Active Drops Bot accounts</summary>
+
+**Standard Bots**
+
+* [@EtherDrops\_bot](https://t.me/EtherDrops_bot)
+* [@EtherDrops1\_bot](https://t.me/EtherDrops1_bot)
+* [@EtherDrops2\_bot](https://t.me/EtherDrops2_bot)
+* [@EtherDrops3\_bot](https://t.me/EtherDrops3_bot)
+* [@EtherDrops4\_bot](https://t.me/EtherDrops4_bot)
+* [@EtherDrops5\_bot](https://t.me/EtherDrops5_bot)
+* [@EtherDrops6\_bot](https://t.me/EtherDrops6_bot)
+* [@EtherDrops8\_bot](https://t.me/EtherDrops8_bot)
+* [@EtherDrops9\_bot](https://t.me/EtherDrops9_bot)
+
+**Premium Bots**
+
+* [@EtherDrops\_Premiumbot](https://t.me/EtherDrops_Premiumbot)
+* [@Drops\_Premiumbot](https://t.me/Drops_Premiumbot)
+* [@Drops\_Premium1bot](https://t.me/Drops_Premium1bot)
+* [@Drops\_Premium2bot](https://t.me/Drops_Premium2bot)
+* [@Drops\_Premium3bot](https://t.me/Drops_Premium3bot)
+
+</details>
 {% endstep %}
 
 {% step %}
@@ -77,7 +98,7 @@ Complete the payment
 {% endstep %}
 {% endstepper %}
 
-<div align="left"><figure><img src="../.gitbook/assets/OpenSubscription.png" alt="" width="375"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="https://2854945133-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FE1xatl7EJgINFUiyMW2P%2Fuploads%2Fw1XHj8vM9yu6VzYmeZDv%2FOpenSubscription.png?alt=media&#x26;token=ff6a6829-753d-41e1-8ed8-3bcbea89c93d" alt="" width="375"><figcaption></figcaption></figure></div>
 
 {% hint style="success" %}
 Your subscription will be automatically activated on your account.
@@ -126,7 +147,7 @@ Tap **“Pay ⭐️”** and complete the payment via Telegram Stars
 {% endstep %}
 {% endstepper %}
 
-<figure><img src="../.gitbook/assets/OpenSubscriptionStarts.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://2854945133-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FE1xatl7EJgINFUiyMW2P%2Fuploads%2FSfY8qsDhFK3YgLfoB0Ho%2FOpenSubscriptionStarts.png?alt=media&#x26;token=0b3573b1-7e0c-4ada-956a-50f8a0c248ad" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
 Your subscription is now active for the selected duration.

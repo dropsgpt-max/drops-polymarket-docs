@@ -24,6 +24,10 @@ layout:
 Drops Bot supports a powerful set of **slash commands** for instant access to all major features, dashboards, and automation tools — no menus required.\
 Whether you’re a power user or just want faster control, here’s everything you need:
 
+{% hint style="info" %}
+**Works in groups and channels:** `/name`, `/ticker`, `/contract`, `/help`, `/coins`, `/nft`, `/funding`, and `/gas`.
+{% endhint %}
+
 ***
 
 ### 🧩 **General Bot Commands**
@@ -65,9 +69,10 @@ Whether you’re a power user or just want faster control, here’s everything y
   * 🚗 Average (\~3m)
   * 🐢 Low (>10m)\
     Includes **“Refresh”** button
+* `/check` — Check available backup bot instances and their current load in a private chat. Red means high load, yellow means medium load, and green means low. Select a lower-load instance; tracked data and settings synchronize automatically.
 * `/customize` — Configure which **metrics appear in wallet alerts**
-* `/profiles` — View and manage your **Profiles** for group/channel notification routing
-* `/gmx_positions` — Displays open **GMX trading positions** from tracked wallets
+* `/profiles` — Open **My Profiles** to manage Profile settings and group/channel notification routing
+* `/usetopic` — Broadcast alerts from the selected Profile to the current Telegram topic. Admins only; no Profile name is required
 
 ***
 
@@ -88,7 +93,7 @@ Whether you’re a power user or just want faster control, here’s everything y
   * **Chart and Info** (DropsTab)
   * **Refresh**
 * `/0x...` — Lookup **DEX-listed tokens** by contract address (ETH, BSC, Polygon, Fantom, Arbitrum, Avalanche)\
-  &#xNAN;_&#x45;xample:_\
+  _&#x45;xample:_\
   `/0xd2568accd10a4c98e87c44e9920360031ad89fcb`\
   ➤ Returns current USD price & change over 1h / 24h / 7d
 

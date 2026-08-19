@@ -46,7 +46,7 @@ For fast access to key actions (Buy, Trading, Menu), use the built-in Telegram b
 
 When you launch Drops Bot, you’ll receive a welcome message like this:
 
-<div align="left"><figure><img src="../.gitbook/assets/1 (3).png" alt="" width="375"><figcaption><p>Welcome Menu</p></figcaption></figure></div>
+<div align="left"><figure><img src="https://2854945133-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FE1xatl7EJgINFUiyMW2P%2Fuploads%2FUCy9vbPo1faWJr1ZtU8c%2F1.png?alt=media&#x26;token=09e3cf75-28fe-44e1-b652-1c20acd0b86a" alt="" width="375"><figcaption><p>Welcome Menu</p></figcaption></figure></div>
 
 It includes instant access to all major functions via clickable links:
 
@@ -58,7 +58,7 @@ Opens the **Tracking menu**, where you can start tracking:
 * [Wallets](../core-features/wallets/) (transfers, contracts, NFT)
 * [NFTs](../core-features/nft/)
 * [Gas Alerts](../core-features/gas-alerts/) and [Funding Alerts](../core-features/funding-alerts.md)
-* [Add new Profile](../advanced-tools/bot-for-groups-and-channels/#what-are-profiles)
+* [Add Profile](../advanced-tools/bot-for-groups-and-channels/#create-a-profile)
 
 <div align="left"><figure><img src="../.gitbook/assets/Tracking.png" alt="" width="375"><figcaption><p>Tracking Section</p></figcaption></figure></div>
 
@@ -68,7 +68,7 @@ Opens the [**Trading Menu**](../core-features/trading-english/).
 
 If no Solana wallet is connected, you'll be prompted to import or create one.
 
-<div align="left"><figure><img src="../.gitbook/assets/Trading (1).png" alt="" width="375"><figcaption><p>Trading Section</p></figcaption></figure></div>
+<div align="left"><figure><img src="https://2854945133-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FE1xatl7EJgINFUiyMW2P%2Fuploads%2FqlICxh5mfB41KY59tvZJ%2FTrading.png?alt=media&#x26;token=f5de584e-961d-493e-acd5-dc525baa79d0" alt="" width="375"><figcaption><p>Trading Section</p></figcaption></figure></div>
 
 ### 🎟️ Referrals
 
@@ -88,11 +88,11 @@ Your referrals also receive a **10% discount** on both subscriptions and trading
 
 To learn more, see the [**Referrals section**](../advanced-tools/referrals.md) and [**Caller Mode section**](../advanced-tools/caller-mode.md).
 
-<div align="left"><figure><img src="../.gitbook/assets/ReferralsClean.png" alt="" width="375"><figcaption><p>Referrals Section</p></figcaption></figure></div>
+<div align="left"><figure><img src="https://2854945133-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FE1xatl7EJgINFUiyMW2P%2Fuploads%2FvGLdSNJsaWtVWe1nSTLc%2FReferralsClean.png?alt=media&#x26;token=43e13edc-ca1a-45fe-81f1-8e7d3e5e67ee" alt="" width="375"><figcaption><p>Referrals Section</p></figcaption></figure></div>
 
 ***
 
-### &#x20;☎️ Caller Mode
+### ☎️ Caller Mode
 
 **Caller Mode** is a special feature for earning **boosted referral commissions** via **Solana trading activity** in Telegram groups.
 

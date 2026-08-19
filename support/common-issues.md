@@ -21,7 +21,7 @@ layout:
 
 # 📩 Common Issues
 
-If you don't find a solution to your specific problem here or require immediate assistance, we recommend reaching out to our dedicated support team directly via Telegram: [**@drops\_support**](https://t.me/edrops_support)
+If you don't find a solution to your specific problem here or require immediate assistance, we recommend reaching out to our dedicated support team directly via Telegram: [**@edrops\_support**](https://t.me/edrops_support)
 
 ***
 
@@ -31,7 +31,7 @@ If you don't find a solution to your specific problem here or require immediate 
 
 **Solution:** This issue is often related to Telegram's internal messaging limits or your bot’s subscription plan.
 
-1. **Switch Bot Instances:** Try switching to a different bot instance. You can view available bots by sending the `/check` command in a private chat with your active bot. Switching instances may help you bypass temporary Telegram messaging limits.
+1. **Check Bot Availability:** Send `/check` in a private chat with your active bot to view available backup instances and their current load. Red means high load, yellow means medium load, and green means low load. Select an available lower-load instance; your tracked data and settings synchronize automatically.
 2. **Check Plan Limits:** It's possible you have reached the hourly message limit according to your bot’s current **subscription plan**. When this limit is reached, alerts will temporarily cease. An example of a message you might receive when hitting a message limit is:
 
 > ⚠️ **Limit Reached**
@@ -48,17 +48,41 @@ If alerts are still not being received after trying the above solutions, please 
 
 ## Bot Not Responding to Commands in a Group
 
-**Description:** After successfully adding the bot to a Telegram group, it fails to react to any commands.
+**Description:** After successfully adding the bot to a Telegram group, it fails to react to commands.
 
-**Solution:** This issue typically indicates an incomplete removal or improper connection of the bot.
+**Solution:** Clear both the Telegram membership and the Profile broadcast connection before adding a fresh bot instance.
 
-1. **Remove Bot from Group:** Begin by completely removing the bot from your Telegram group.
-2. **Verify Complete Deletion:** Ensure the bot has been fully removed from your profile's tracked groups:
-   * Navigate to: **Main menu** → **Tracking** → **My Profiles**.
-   * Open the editing menu for any profile by tapping the `/EDIT` command.
-   * If the group still appears, tap **Delete Group** and select the group you want to remove.
-3. **Change Bot Instance:** After confirming the bot is entirely removed from the group and your profile, you will need to change your active bot instance. Send the `/check` command in a private chat with your current bot to see available bot instances.
-4. **Re-add Bot:** Once you have switched to a new bot instance, attempt to connect the bot to your group by following the instructions in the [Add Bot to a Group or Channel](../advanced-tools/bot-for-groups-and-channels/create-and-manage-profiles.md#how-to-add-the-bot-to-a-group) guide.
+{% stepper %}
+{% step %}
+**Remove the bot from Telegram**
+
+Completely remove Drops Bot from the Telegram group.
+{% endstep %}
+
+{% step %}
+**Remove the group from the Profile broadcast list**
+
+In a private chat with Drops Bot, go to **Main Menu** → **Tracking** → **My Profiles** → tap `✏️` next to the Profile → **Broadcast** → tap `🗑️` next to the group → **✅ Confirm**.
+{% endstep %}
+
+{% step %}
+**Check the result**
+
+Removing the group from the broadcast list stops alerts from this Profile but does not remove Drops Bot from the Telegram group. Step 1 removes the bot itself.
+{% endstep %}
+
+{% step %}
+**Change the bot instance**
+
+Send `/check` in a private chat with the active bot. The command shows available backup instances and their current load: red means high, yellow means medium, and green means low. Select an available lower-load instance; your tracked data and settings synchronize automatically.
+{% endstep %}
+
+{% step %}
+**Add the bot again**
+
+Follow [Bot for Groups, Channels, and Topics](../advanced-tools/bot-for-groups-and-channels/#how-to-add-the-bot-to-a-group) to reconnect the group and select the Profile that should broadcast alerts.
+{% endstep %}
+{% endstepper %}
 
 ***
 

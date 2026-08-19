@@ -137,7 +137,7 @@ Use **Profiles** to route alerts to specific destinations:
 * **Main Profile** for default private or group alerts
 * **Custom Profiles** for organizing by topic, group, or channel
 
-One Drops Bot per group or channel. Multiple Profiles allowed per instance.
+One active Drops Bot instance manages Profiles for each group or channel. In groups, additional backup instances can be added to distribute alert delivery; they synchronize automatically with the active instance. Multiple Profiles can be managed through the active instance.
 
 Caller Mode works seamlessly within group alerts when the bot is added and Caller Mode is enabled.
 
@@ -160,4 +160,3 @@ Drops Bot is an essential tool for anyone who wants to stay updated on the lates
 
 If you have questions, feedback, or suggestions — reach out in our community [Telegram chat](https://t.me/dropstab_EN).
 {% endhint %}
-

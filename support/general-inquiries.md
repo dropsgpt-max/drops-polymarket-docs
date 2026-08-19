@@ -34,7 +34,7 @@ For any inquiries or direct support, we recommend reaching out to our dedicated 
 
 ## How to Link Your DropsTab Account with Drops Bot?
 
-**Answer:** Linking your DropsTab and Drops Bot accounts is essential for participating in Fomo App tasks or [receiving specific alerts](../core-features/settings.md#miniapp-alerts). Follow these steps to establish the connection:
+Follow these steps to establish the connection:
 
 1. **Access DropsTab Website:** Open the [DropsTab](https://dropstab.com/).
 2. **Log In:** Authorize your account if you haven't already.
