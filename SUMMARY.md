@@ -58,6 +58,7 @@
 
 * [👤 Bot for Groups, Channels, and Topics](advanced-tools/bot-for-groups-and-channels/README.md)
   * [🔊 Missing alerts in your group?](advanced-tools/bot-for-groups-and-channels/missing-alerts-in-your-group.md)
+  * [🔊 Missing alerts in your group?](advanced-tools/bot-for-groups-and-channels/missing-alerts-in-your-group-1.md)
 * [☎️ Caller Mode](advanced-tools/caller-mode.md)
 * [🎟️ Referrals](advanced-tools/referrals.md)
 * [🔑 API](advanced-tools/api.md)
