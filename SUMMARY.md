@@ -63,6 +63,7 @@
 * [🎟️ Referrals](advanced-tools/referrals.md)
 * [🔑 API](advanced-tools/api.md)
 * [🧩 Slash Commands](advanced-tools/slash-commands.md)
+* [🧩 Slash Commands](advanced-tools/slash-commands-1.md)
 
 ## ❓ Support
 
